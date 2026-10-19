@@ -264,7 +264,7 @@ describe("setup scoped readiness", () => {
       {
         client: "codex",
         config_path: "/codex.toml",
-        command: ["bld", "mcp"],
+        command: ["bant", "mcp"],
         state: "aligned",
         remediation: null,
       },

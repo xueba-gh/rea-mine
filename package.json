@@ -38,7 +38,7 @@
     "#javascript-analysis-worker": "./dist/composition/javascriptAnalysisWorkerProcess.js"
   },
   "bin": {
-    "bld": "scripts/rea.mjs",
+    "bant": "scripts/rea.mjs",
     "build-anything": "scripts/rea.mjs"
   },
   "engines": {

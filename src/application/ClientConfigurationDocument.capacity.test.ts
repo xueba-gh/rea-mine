@@ -6,7 +6,7 @@ import {
   withClientServers,
 } from "./ClientConfigurationDocument.js";
 
-const registration = { command: "bld", args: ["mcp"] };
+const registration = { command: "bant", args: ["mcp"] };
 
 const serializedText = (
   ...input: Parameters<typeof serializeClientConfiguration>

@@ -70,7 +70,7 @@ To install the `rea` command for regular use:
 
 ```bash
 npm install --global build-anything
-bld --help
+bant --help
 ```
 
 For native analysis, configure a provider first. See the
@@ -85,11 +85,11 @@ installation up to date.
 For a CLI installed with `npm install --global` or `bun add --global`:
 
 ```bash
-bld update
+bant update
 ```
 
-`bld --update` is an alias for this verified workflow and accepts the same global
-output flags. Use `bld update` when combining it with other command controls.
+`bant --update` is an alias for this verified workflow and accepts the same global
+output flags. Use `bant update` when combining it with other command controls.
 
 Updater commands retain at most 4 MiB of stdout and stderr combined. Oversized
 metadata replies are rejected after the command exits; verbose installs continue
@@ -97,7 +97,7 @@ with bounded diagnostics. Human progress output respects terminal backpressure
 and waits for submitted writes to finish.
 
 Bun global updates require Bun 1.2.17 or later. With an older Bun release,
-upgrade Bun manually before running `bld update`.
+upgrade Bun manually before running `bant update`.
 
 To refresh your agent registrations and skill, run the setup command printed
 by the update.
@@ -244,7 +244,7 @@ Update first; a recent release may already fix it.
 For a CLI installed with `npm install --global` or `bun add --global`:
 
 ```bash
-bld update
+bant update
 ```
 
 For agent setup through `npx`:
