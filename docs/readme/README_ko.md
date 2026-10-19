@@ -9,10 +9,10 @@
 
 **마음에 드는 기능을 발견했다면, 바이너리 수준까지 작동 원리를 이해하세요.**
 
-[![npm version](https://img.shields.io/npm/v/rea-agents?style=flat-square&color=cb3837)](https://www.npmjs.com/package/rea-agents)
+[![npm version](https://img.shields.io/npm/v/build-anything?style=flat-square&color=cb3837)](https://www.npmjs.com/package/build-anything)
 [![MCP tool catalog](https://img.shields.io/badge/MCP-tool_catalog-5c4ee5?style=flat-square)](../mcp-contracts.md#generated-catalog)
 [![Node.js requirements](https://img.shields.io/badge/Node.js-requirements-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#current-status)
-[![skills.sh](https://skills.sh/b/morluto/rea?style=flat-square)](https://skills.sh/morluto/rea/reverse-engineer-anything)
+[![skills.sh](https://skills.sh/b/xueba-gh/build-anything?style=flat-square)](https://skills.sh/xueba-gh/build-anything/reverse-engineer-anything)
 [![MIT license](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](../../LICENSE)
 [![Discord](https://img.shields.io/discord/1556595354999332884?logo=discord&logoColor=white&label=Discord&color=5865F2)](https://discord.gg/GkcryMnJDM)
 
@@ -22,12 +22,12 @@
 
 [빠른 시작](#빠른-시작) · [REA의 작동 방식](#rea의-작동-방식) · [분석할 수 있는 대상](#분석할-수-있는-대상) · [사례](#사례) · [자주 묻는 질문](#자주-묻는-질문) · [문서](#문서)
 
-<code>npx rea-agents setup</code>
+<code>npx build-anything setup</code>
 
 </div>
 
 > [!IMPORTANT]
-> REA 공식 배포처: [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
+> REA 공식 배포처: [xueba-gh/build-anything](https://github.com/xueba-gh/build-anything), [rea.tools](https://rea.tools/), [build-anything](https://www.npmjs.com/package/build-anything) (npm).
 > 이 공식 배포처에서 제공하는 설치 및 릴리스 링크를 이용하세요. 비슷한 저장소 이름이나 복사된 README만으로는 공식 배포 파일인지 확인할 수 없습니다.
 
 <div align="center">
@@ -73,7 +73,7 @@ Linux에서 Ghidra, JADX, 펌웨어 도구를 실행하거나 정적 JavaScript/
 Node.js와 npm이 설치된 환경에서 다음 명령을 실행하세요.
 
 ```bash
-npx rea-agents setup
+npx build-anything setup
 ```
 
 에이전트를 선택하고, 예정된 변경 사항을 검토한 뒤 승인하세요. 설정 과정은 기존 설정을 백업하고 REA의 MCP 서버와 버전에 맞는 워크플로 지침을 추가합니다. 완료 후 에이전트를 다시 시작하세요.
@@ -93,7 +93,7 @@ Notes를 대상 앱으로 바꾸고 이해하고 싶은 기능을 지정하세�
 압축을 푼 JavaScript/Electron 앱 디렉터리 또는 ASAR를 검사합니다.
 
 ```bash
-npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json
+npx -y build-anything@latest analyze-javascript-application /absolute/path/to/app --json
 ```
 
 결과에는 모듈, 임포트, Electron 경계와 관련 근거가 포함됩니다. 경로를 분석할 대상으로 바꾸세요. Windows에서는 `"D:/apps/example"` 같은 경로를 사용할 수 있습니다.
@@ -101,7 +101,7 @@ npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --
 자주 사용할 경우 `rea` 명령을 설치하세요.
 
 ```bash
-npm install --global rea-agents
+npm install --global build-anything
 rea --help
 ```
 
@@ -124,10 +124,10 @@ Bun 전역 업데이트에는 Bun 1.2.17 이상이 필요합니다. 이전 버�
 `npx`를 사용한다면 다음 명령으로 에이전트 설정을 갱신하세요.
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-설정 변경 사항을 검토하고 에이전트를 다시 시작하세요. 일회성 CLI 작업에는 `npx rea-agents@latest` 뒤에 필요한 명령을 붙여 실행하세요. Bun을 사용한다면 위 명령의 `npx rea-agents@latest`를 `bunx rea-agents@latest`로 바꿔 실행하세요.
+설정 변경 사항을 검토하고 에이전트를 다시 시작하세요. 일회성 CLI 작업에는 `npx build-anything@latest` 뒤에 필요한 명령을 붙여 실행하세요. Bun을 사용한다면 위 명령의 `npx build-anything@latest`를 `bunx build-anything@latest`로 바꿔 실행하세요.
 
 ## REA의 작동 방식
 
@@ -201,7 +201,7 @@ REA에는 Node.js 22.x(>=22.19), 24.x(>=24.11) 또는 26+와 npm이 필요합니
 [사례 읽기](https://rea.tools/ko/showcase/th04/) ·
 [재구현 저장소](https://github.com/N0zoM1z0/th04)
 
-REA로 흥미로운 대상을 분석했다면 알려 주세요. [issue](https://github.com/morluto/rea/issues) 또는 [pull request](https://github.com/morluto/rea/pulls)에 대상, 조사하려던 질문, REA가 어떻게 도움이 되었는지, 무엇을 알아냈는지를 담아 공유하세요.
+REA로 흥미로운 대상을 분석했다면 알려 주세요. [issue](https://github.com/xueba-gh/build-anything/issues) 또는 [pull request](https://github.com/xueba-gh/build-anything/pulls)에 대상, 조사하려던 질문, REA가 어떻게 도움이 되었는지, 무엇을 알아냈는지를 담아 공유하세요.
 
 ## 자주 묻는 질문
 
@@ -229,7 +229,7 @@ REA는 작업에 필요할 때 Hopper를 실행합니다. macOS에서는 처음 
 <details>
 <summary><strong>skills.sh에서 설치하는 스킬은 어떤 역할을 하나요?</strong></summary>
 
-스킬은 에이전트에게 조사 지침을 제공합니다. `npx rea-agents setup`으로 REA의 MCP 서버를 등록하고 버전에 맞는 지침을 설치한 뒤 에이전트를 다시 시작하세요. [스킬만 설치하기](../installation.md#skill-only-installation)를 참고하세요.
+스킬은 에이전트에게 조사 지침을 제공합니다. `npx build-anything setup`으로 REA의 MCP 서버를 등록하고 버전에 맞는 지침을 설치한 뒤 에이전트를 다시 시작하세요. [스킬만 설치하기](../installation.md#skill-only-installation)를 참고하세요.
 
 </details>
 
@@ -261,10 +261,10 @@ rea update
 `npx`로 에이전트를 설정했다면 다음 명령을 사용합니다.
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-에이전트를 사용 중이라면 [설정 갱신](#rea-업데이트)을 완료하고 다시 시작하세요. 같은 작업을 다시 시도하세요. 문제가 계속되면 REA 버전, 대상 유형, 재현 단계, 오류 출력을 포함해 [issue를 등록](https://github.com/morluto/rea/issues)하세요.
+에이전트를 사용 중이라면 [설정 갱신](#rea-업데이트)을 완료하고 다시 시작하세요. 같은 작업을 다시 시도하세요. 문제가 계속되면 REA 버전, 대상 유형, 재현 단계, 오류 출력을 포함해 [issue를 등록](https://github.com/xueba-gh/build-anything/issues)하세요.
 
 </details>
 
@@ -289,9 +289,9 @@ REA를 사용하고, 버그를 보고하고, 기능을 요청하고, 빌드를 �
 
 <a href="https://www.star-history.com/?repos=morluto%2Frea&amp;type=date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date&amp;theme=dark&amp;legend=top-left" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
-    <img alt="REA GitHub 스타 기록" src="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date&amp;theme=dark&amp;legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
+    <img alt="REA GitHub 스타 기록" src="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
   </picture>
 </a>
 
@@ -305,7 +305,7 @@ REA는 법을 준수하는 연구, 교육, 상호운용성 확보, 소프트웨�
 
 ## 기여
 
-REA에 도움을 보태 주세요! [issue를 등록](https://github.com/morluto/rea/issues)해 버그나 기능을 제안하거나, [pull request를 보내](https://github.com/morluto/rea/pulls) 코드와 문서를 개선할 수 있습니다.
+REA에 도움을 보태 주세요! [issue를 등록](https://github.com/xueba-gh/build-anything/issues)해 버그나 기능을 제안하거나, [pull request를 보내](https://github.com/xueba-gh/build-anything/pulls) 코드와 문서를 개선할 수 있습니다.
 
 개발 환경과 검사 항목은 [CONTRIBUTING.md](../../CONTRIBUTING.md), 검증 절차는 [테스트 가이드](../testing.md), 프로젝트 구조는 [아키텍처 지도](../architecture.mermaid)를 참고하세요.
 

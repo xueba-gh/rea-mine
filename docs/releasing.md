@@ -73,7 +73,7 @@ the optional manual path below. It retains explicit prepare and publish phases.
 
 ## Contributor-aware release notes
 
-Use [the rea-changelog-update skill](https://github.com/morluto/rea/blob/main/.agents/skills/rea-changelog-update/SKILL.md)
+Use [the rea-changelog-update skill](https://github.com/xueba-gh/build-anything/blob/main/.agents/skills/rea-changelog-update/SKILL.md)
 to turn the bot draft into grouped Highlights, Changes, and Fixes with inline
 `Thanks @...` credit. `npm run release:notes -- inventory` collects the full
 selected Git range and paginated GitHub PR/author/closing-issue metadata;
@@ -285,7 +285,7 @@ the combined contracts with the released package version.
 Before merging, check whether GitHub permits merge commits:
 
 ```bash
-gh api repos/morluto/rea --jq .allow_merge_commit
+gh api repos/xueba-gh/build-anything --jq .allow_merge_commit
 ```
 
 If disabled, a maintainer must arrange an approved ancestry-preserving merge
@@ -303,7 +303,7 @@ tag is an ancestor of main:
 
 ```bash
 git fetch origin main --tags
-git merge-base --is-ancestor rea-agents-5.0.0 origin/main
+git merge-base --is-ancestor build-anything-5.0.0 origin/main
 ```
 
 Close the superseded main proposal before merging the synchronization PR.

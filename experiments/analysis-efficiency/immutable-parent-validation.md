@@ -1,6 +1,6 @@
 # Reuse successful immutable parent validation
 
-This checkpoint addresses [#4810](https://github.com/morluto/rea/issues/4810),
+This checkpoint addresses [#4810](https://github.com/xueba-gh/build-anything/issues/4810),
 found in the [retained-investigation audit](retained-investigation-workflows.md).
 It changes the shared format interpretation used by CLI and MCP views, without
 adding a tool, changing a schema, projecting away source data, or rerunning a

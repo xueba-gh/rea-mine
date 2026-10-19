@@ -16,7 +16,7 @@ preserving your REA client entry. See the
 
 For GitHub Copilot CLI 1.0.95, `gpt-4.1` model metadata can block ordinary
 chat with REA's full input-schema profile before sending a model request
-(`compaction_static_context_blocked`; [#1554](https://github.com/morluto/rea/issues/1554)).
+(`compaction_static_context_blocked`; [#1554](https://github.com/xueba-gh/build-anything/issues/1554)).
 For the native offline OpenAI-compatible BYOK adapter, full-profile chat and
 analysis also passed with a distinct `COPILOT_PROVIDER_MODEL_ID` such as
 `rea-gpt-4.1`, `COPILOT_PROVIDER_WIRE_MODEL=gpt-4.1`, and that distinct ID selected
@@ -60,7 +60,7 @@ in the file the installed app reads:
   The reported `AnthropicPBC.Claude_fnn82j28hfe8t` build can use the `Claude-3p`
   deployment directory. REA recognizes that package as an unresolved location;
   it does not assume that it reads the legacy AppData file or automatically
-  register in `Claude-3p`. See [#4432](https://github.com/morluto/rea/issues/4432)
+  register in `Claude-3p`. See [#4432](https://github.com/xueba-gh/build-anything/issues/4432)
   for the reported build and manual registration evidence.
 
 Quit Claude Desktop fully before approving setup; closing its window is not
@@ -111,7 +111,7 @@ Claude Code normally defers MCP tool definitions through tool search. It
 when `ANTHROPIC_BASE_URL` points to a non-first-party host, such as DeepSeek's
 Anthropic-compatible endpoint. It then sends every REA tool's name, description
 and input schema with every request
-([#2019](https://github.com/morluto/rea/issues/2019)). On main at 04089d5be,
+([#2019](https://github.com/xueba-gh/build-anything/issues/2019)). On main at 04089d5be,
 with 172 tools, that payload measured about 496 KB with the default profile and
 about 290 KB with `compact`. By the o200k and cl100k tokenizers, that is roughly
 120k and 68k tokens. Compaction cannot remove tool definitions. If they nearly
@@ -397,7 +397,7 @@ that produces the entire REA config, or a group-targeted REA insertion. Use a
 literal config and a root-level insertion as shown above.
 
 For a global npm installation, the launcher is under
-`$(npm root -g)/rea-agents/scripts/rea.mjs`. Restart Harness after setup; it
+`$(npm root -g)/build-anything/scripts/rea.mjs`. Restart Harness after setup; it
 exposes tools as `mcp__rea__<tool_name>`. Run `rea setup --skill --dry-run`,
 review the destination, then `rea setup --skill --yes` to install the workflow
 in `~/.agents/skills` (`$DSH_AGENTS_HOME/skills` when configured); Harness
@@ -441,7 +441,7 @@ the data directory as aligned. Ask the Grok Bot chat to add a custom MCP
 server named `rea` that runs on the Bot's computer:
 
 ```bash
-npx -y rea-agents@<version> mcp
+npx -y build-anything@<version> mcp
 ```
 
 Do not put credentials in that command or its arguments. `rea doctor --client grok_bot`

@@ -1,75 +1,31 @@
 <div align="center">
 
-**English** · [简体中文](docs/readme/README_zh.md) · [繁體中文](docs/readme/README_zh-TW.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Türkçe](docs/readme/README_tr.md) · [Русский](docs/readme/README_ru.md) · [Tiếng Việt](docs/readme/README_vi.md) · [ไทย](docs/readme/README_th.md) · [Deutsch](docs/readme/README_de.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Українська](docs/readme/README_uk.md) · [Polski](docs/readme/README_pl.md) · [Português (Brasil)](docs/readme/README_pt-BR.md) · [العربية](docs/readme/README_ar.md) · [فارسی](docs/readme/README_fa.md) · [Bahasa Indonesia](docs/readme/README_id.md) · [Italiano](docs/readme/README_it.md)
-· [Ελληνικά](docs/readme/README_el.md) · [മലയാളം](docs/readme/README_ml.md)
+# Build Anything
 
-# REA: Reverse Engineer Anything
+### A reverse-engineering MCP for binaries, applications, and runtime behavior.
 
-### One MCP for reverse engineering across binaries, applications, and runtime behavior.
+**See a feature you like. Understand how it works, down to the binary level, then build your own.**
 
-**See a feature you like. Understand how it works, down to the binary level.**
-
-[![npm version](https://img.shields.io/npm/v/rea-agents?style=flat-square&color=cb3837)](https://www.npmjs.com/package/rea-agents)
 [![MCP tool catalog](https://img.shields.io/badge/MCP-tool_catalog-5c4ee5?style=flat-square)](docs/mcp-contracts.md#generated-catalog)
-[![Node.js requirements](https://img.shields.io/badge/Node.js-requirements-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#what-you-can-analyze)
-[![skills.sh](https://skills.sh/b/morluto/rea?style=flat-square)](https://skills.sh/morluto/rea/reverse-engineer-anything)
 [![MIT license](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
-[![Discord](https://img.shields.io/discord/1556595354999332884?logo=discord&logoColor=white&label=Discord&color=5865F2)](https://discord.gg/GkcryMnJDM)
 
-<a href="https://trendshift.io/repositories/82054?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-82054" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/82054" alt="morluto%2Frea | Trendshift" width="250" height="55"/></a>
+[Quick start](#quick-start) · [How it works](#how-build-anything-works) · [What you can analyze](#what-you-can-analyze) · [FAQ](#faq) · [Documentation](#documentation)
 
-**[Website](https://rea.tools/) · [Guides](https://rea.tools/guides/) · [Showcases](https://rea.tools/showcase/)**
-
-[Quick start](#quick-start) · [How REA works](#how-rea-works) · [What you can analyze](#what-you-can-analyze) · [Showcases](#showcases) · [FAQ](#faq) · [Documentation](#documentation)
-
-<code>npx rea-agents setup</code>
+<code>npx build-anything setup</code>
 
 </div>
 
-> [!IMPORTANT]
-> Get REA from [morluto/rea](https://github.com/morluto/rea),
-> [rea.tools](https://rea.tools/), or the [rea-agents npm package](https://www.npmjs.com/package/rea-agents).
-> Follow the installation and release links from these official sources. A similar
-> repository name or copied README does not establish that a download is official.
-
-<div align="center">
-
-<br />
-
-<img src="docs/assets/rea-hopper-analysis.png" alt="REA launching its analysis bridge inside Hopper while inspecting a native binary" width="1200" />
-
-<br /><br />
-
-<table aria-label="REA community">
-<tr>
-<td align="center" width="360">
-  <a href="https://discord.gg/GkcryMnJDM">
-    <img src="docs/assets/discord.svg" height="42" alt="Discord" /><br />
-    <strong>Join the Reverse Engineering Community</strong>
-  </a><br />
-  <sub>Discord · Q&amp;A · Show and Tell</sub>
-</td>
-</tr>
-</table>
-
-<br />
-
-</div>
+> [!NOTE]
+> **Build Anything is an independent fork of [REA ("Reverse Engineer Anything")](https://github.com/morluto/rea) by morluto, used under the MIT License.**
+> It is not the official REA project and is not affiliated with or endorsed by the upstream maintainer.
+> See [`NOTICE.md`](NOTICE.md) for attribution and [`LICENSE`](LICENSE) for terms.
 
 ---
-
-See a feature in an app that you want in your own product? Ask your agent to investigate it with REA. It can inspect the app without its source code, explain how the feature works, show the evidence, and build a version for your project.
-
-REA connects your agent to tools for inspecting native binaries, JavaScript and Electron apps, .NET assemblies, and websites. You can also use the same tools from your terminal. Analysis runs locally, and results include the evidence and limitations behind each conclusion.
-
-Setup registers REA with your agent and installs matching workflow instructions. Native analysis can use an existing Hopper, Ghidra, or IDA installation; setup can optionally install Hopper with approval. Static JavaScript analysis needs no native analysis engine.
-
-> **[Visit the REA website](https://rea.tools/)** for setup instructions, illustrated guides, and real case studies.
 
 ## Quick start
 
 On Linux, Ghidra, JADX, firmware tool launches and static JavaScript/Electron
-analysis require a procps-compatible `ps` on REA's `PATH` for process ownership
+analysis require a procps-compatible `ps` on Build Anything's `PATH` for process ownership
 checks. Recovery steps are in `docs/installation.md` under
 "Linux owned-process prerequisite".
 
@@ -78,11 +34,11 @@ checks. Recovery steps are in `docs/installation.md` under
 With Node.js and npm installed, run:
 
 ```bash
-npx rea-agents setup
+npx build-anything setup
 ```
 
 Choose your agents, review the proposed changes, and approve them. Setup adds
-REA's MCP server and matching workflow instructions, with backups of existing
+Build Anything's MCP server and matching workflow instructions, with backups of existing
 configuration. Restart your agent afterward.
 
 Setup supports Claude Code, Codex, Cursor, Gemini CLI, Grok Build and
@@ -104,7 +60,7 @@ Replace Notes with your target app and the feature you want to understand.
 Inspect an extracted JavaScript/Electron app directory or ASAR:
 
 ```bash
-npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json
+npx -y build-anything@latest analyze-javascript-application /absolute/path/to/app --json
 ```
 
 The result includes modules, imports, Electron boundaries and their evidence.
@@ -113,27 +69,27 @@ Replace the path with your target, such as `"D:/apps/example"` on Windows.
 To install the `rea` command for regular use:
 
 ```bash
-npm install --global rea-agents
-rea --help
+npm install --global build-anything
+bld --help
 ```
 
 For native analysis, configure a provider first. See the
 [CLI and Evidence guide](docs/cli.md) for native commands, provider selection,
 snapshots and scripting.
 
-### Update REA
+### Update Build Anything
 
-REA changes quickly, and new releases include frequent bug fixes. Keep your
+Build Anything changes quickly, and new releases include frequent bug fixes. Keep your
 installation up to date.
 
 For a CLI installed with `npm install --global` or `bun add --global`:
 
 ```bash
-rea update
+bld update
 ```
 
-`rea --update` is an alias for this verified workflow and accepts the same global
-output flags. Use `rea update` when combining it with other command controls.
+`bld --update` is an alias for this verified workflow and accepts the same global
+output flags. Use `bld update` when combining it with other command controls.
 
 Updater commands retain at most 4 MiB of stdout and stderr combined. Oversized
 metadata replies are rejected after the command exits; verbose installs continue
@@ -141,7 +97,7 @@ with bounded diagnostics. Human progress output respects terminal backpressure
 and waits for submitted writes to finish.
 
 Bun global updates require Bun 1.2.17 or later. With an older Bun release,
-upgrade Bun manually before running `rea update`.
+upgrade Bun manually before running `bld update`.
 
 To refresh your agent registrations and skill, run the setup command printed
 by the update.
@@ -149,21 +105,21 @@ by the update.
 If you use `npx`, update your agent setup with:
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
 Review the setup changes and restart your agent. For one-off CLI commands,
-use `npx rea-agents@latest` followed by the command. With Bun, use
-`bunx rea-agents@latest` in place of `npx rea-agents@latest`.
+use `npx build-anything@latest` followed by the command. With Bun, use
+`bunx build-anything@latest` in place of `npx build-anything@latest`.
 
-## How REA works
+## How Build Anything works
 
-Your agent calls REA through MCP to inspect the target and trace relevant code.
-REA returns findings with their evidence. The agent uses them to ask follow-up
+Your agent calls Build Anything through MCP to inspect the target and trace relevant code.
+Build Anything returns findings with their evidence. The agent uses them to ask follow-up
 questions, explain the behavior, or write and test an implementation.
 CLI commands use the same workflows.
 
-![REA investigation flow: your agent asks about a local target, REA inspects and traces it using analysis tools, and the agent uses the returned code, references and unknowns to explain, implement and test.](website/public/assets/figures/rea-investigation-flow.svg)
+![Build Anything investigation flow: your agent asks about a local target, Build Anything inspects and traces it using analysis tools, and the agent uses the returned code, references and unknowns to explain, implement and test.](website/public/assets/figures/rea-investigation-flow.svg)
 
 [Open the full-size figure](website/public/assets/figures/rea-investigation-flow.svg).
 
@@ -171,10 +127,10 @@ CLI commands use the same workflows.
 
 ## What you can analyze
 
-REA requires Node.js 22.x (>=22.19), 24.x (>=24.11), or 26+, plus npm.
+Build Anything requires Node.js 22.x (>=22.19), 24.x (>=24.11), or 26+, plus npm.
 Additional tools and host support depend on the target:
 
-| Target                 | What REA returns                                                                     | Requirements and guide                                                                                                                |
+| Target                 | What Build Anything returns                                                          | Requirements and guide                                                                                                                |
 | ---------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Native binaries        | Pseudocode, assembly, strings, symbols, calls and references                         | Hopper, Ghidra or IDA; [native analysis](docs/native-investigation.md)                                                                |
 | Offline ELF layout     | Sections, segments, original symbols/relocations and static mitigation candidates    | Caller-supplied pwntools on Linux x64; [binary diagnostics](docs/binary-diagnostics.md)                                               |
@@ -204,9 +160,9 @@ Static JavaScript and .NET inspection read the supplied files without running
 the application. Runtime capture runs or interacts with the selected target
 using your user permissions; each runtime guide describes its effects.
 
-For offline native-binary inspection, REA also supports caller-supplied GNU
+For offline native-binary inspection, Build Anything also supports caller-supplied GNU
 objdump and Rizin. See the [reverse-engineering tools guide](docs/reverse-engineering-tools.md)
-for provider setup, CLI commands, and Evidence limitations. REA does not install
+for provider setup, CLI commands, and Evidence limitations. Build Anything does not install
 or update either provider.
 
 <a id="choosing-a-deep-analysis-provider"></a>
@@ -223,44 +179,10 @@ For provider selection, see the [CLI guide](docs/cli.md#choose-a-provider).
 Check [release availability](docs/installation.md#released-package-and-main)
 for features added since the latest npm release.
 
-## Showcases
-
-[![Illustrations of the DX-Ball sound-pan, Notion clipboard-bridge, and TH04 bullet-ring showcases](docs/assets/rea-showcases.png)](https://rea.tools/showcase/)
-
-### DX-Ball: reconstruct a sound-pan calculation
-
-Follow a sound call into its position-to-pan helper, inspect the instructions,
-and turn incomplete pseudocode into C. The reconstruction passes 3,205
-original-x86 cases and reproduces all 63 compiled function bytes.
-
-[Read the case study](https://rea.tools/showcase/dx-ball/) ·
-[Reconstruction repository](https://github.com/N0zoM1z0/dx-ball)
-
-### Notion: trace the Electron clipboard bridge
-
-Find the renderer's clipboard API, follow it through preload and IPC into the
-main process, and inspect the rich clipboard format.
-
-[Read the case study](https://rea.tools/showcase/notion/)
-
-### TH04: recover a DOS bullet-ring calculation
-
-Inspect the original PC-98 game's 16-bit instructions, recover the fixed and
-aimed angle calculations, and compare the reconstructed C++ with the
-historical compiler output.
-
-[Read the case study](https://rea.tools/showcase/th04/) ·
-[Reconstruction repository](https://github.com/N0zoM1z0/th04)
-
-If you've used REA on something interesting, we'd love to see it. Share your
-case in an [issue](https://github.com/morluto/rea/issues) or a
-[pull request](https://github.com/morluto/rea/pulls), including the target,
-your question, how REA helped, and what you found.
-
 ## FAQ
 
 <details>
-<summary><strong>Which agents can use REA?</strong></summary>
+<summary><strong>Which agents can use Build Anything?</strong></summary>
 
 Any agent that supports local MCP servers. Setup configures the
 [supported agents](docs/installation.md#supported-agents); other clients can use
@@ -280,7 +202,7 @@ Ghidra and IDA use your existing installations. See [provider setup](docs/instal
 <details>
 <summary><strong>Do I need to start Hopper first?</strong></summary>
 
-REA starts Hopper when an operation needs it. On macOS, a first-run dialog may
+Build Anything starts Hopper when an operation needs it. On macOS, a first-run dialog may
 ask you to choose demo mode or activate your license. Complete that prompt in the
 same user session before your first CLI/MCP operation or unattended job. Open
 Hopper manually if needed. See
@@ -291,14 +213,14 @@ Hopper manually if needed. See
 <details>
 <summary><strong>What does installing the skill from skills.sh do?</strong></summary>
 
-The skill supplies investigation instructions for your agent. Use `npx rea-agents setup`
-to register REA's MCP server and install the matching instructions, then restart
+The skill supplies investigation instructions for your agent. Use `npx build-anything setup`
+to register Build Anything's MCP server and install the matching instructions, then restart
 your agent. See [skill-only installation](docs/installation.md#skill-only-installation).
 
 </details>
 
 <details>
-<summary><strong>What code does REA return?</strong></summary>
+<summary><strong>What code does Build Anything return?</strong></summary>
 
 Native analysis returns pseudocode and assembly. JavaScript/Electron analysis
 recovers modules and their relationships. Your agent uses these findings to
@@ -307,9 +229,9 @@ write and test an implementation; the [showcases](#showcases) give worked exampl
 </details>
 
 <details>
-<summary><strong>Does REA upload my app?</strong></summary>
+<summary><strong>Does Build Anything upload my app?</strong></summary>
 
-REA analyzes targets locally. Your agent receives the tool results, and its
+Build Anything analyzes targets locally. Your agent receives the tool results, and its
 model provider has its own data policy.
 
 </details>
@@ -322,24 +244,24 @@ Update first; a recent release may already fix it.
 For a CLI installed with `npm install --global` or `bun add --global`:
 
 ```bash
-rea update
+bld update
 ```
 
 For agent setup through `npx`:
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
 If you're using an agent, complete the [setup refresh](#update-rea) and restart
-it. Retry the same task. If the problem persists, [open an issue](https://github.com/morluto/rea/issues)
-with your REA version, target type, steps to reproduce and error output.
+it. Retry the same task. If the problem persists, [open an issue](https://github.com/xueba-gh/build-anything/issues)
+with your Build Anything version, target type, steps to reproduce and error output.
 
 </details>
 
 ## Documentation
 
-Start with the website's [worked guides](https://rea.tools/guides/).
+Start with the [documentation](docs/).
 For exact options, prerequisites and result contracts:
 
 - [Installation and setup](docs/installation.md): agent registration, provider configuration, updates and uninstall.
@@ -351,34 +273,20 @@ For exact options, prerequisites and result contracts:
 
 Report vulnerabilities through [SECURITY.md](SECURITY.md).
 
-## Star history
-
-🎉 **300,000 GitHub stars — thank you!**
-
-Thanks to everyone using REA, reporting bugs, requesting features, testing builds, and contributing fixes.
-
-<a href="https://www.star-history.com/?repos=morluto%2Frea&amp;type=date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date&amp;theme=dark&amp;legend=top-left" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
-    <img alt="REA GitHub star history" src="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
-  </picture>
-</a>
-
 ## Disclaimer
 
 See [DISCLAIMER.md](DISCLAIMER.md) for responsible-use guidance.
 
-The project's position on illegal or unauthorized use covers all REA versions,
+The project's position on illegal or unauthorized use covers all Build Anything versions,
 distribution channels, and platforms; each copy retains its applicable licenses.
 
-REA is for lawful research, education, interoperability, software preservation,
+Build Anything is for lawful research, education, interoperability, software preservation,
 and analysis of software you own or are authorized to examine.
 
 ## Contributing
 
-We'd love your help with REA! [Open an issue](https://github.com/morluto/rea/issues) to
-report a bug or suggest a feature, or [send a pull request](https://github.com/morluto/rea/pulls)
+We'd love your help with Build Anything! [Open an issue](https://github.com/xueba-gh/build-anything/issues) to
+report a bug or suggest a feature, or [send a pull request](https://github.com/xueba-gh/build-anything/pulls)
 to improve the code or docs.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and checks,
@@ -389,14 +297,14 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and checks,
 
 [MIT](LICENSE)
 
-REA-authored code is licensed under MIT. Third-party material retains its own
+Code in this fork is licensed under MIT; the upstream REA project is (c) morluto under MIT (see [`NOTICE.md`](NOTICE.md)). Third-party material retains its own
 licenses and copyright notices; see
 [Third-party notices](THIRD_PARTY_NOTICES.md) for the dependency inventory,
 preserved license texts, and external-tool terms.
 
 **You must legally obtain and be authorized to use commercial tools**, including
 IDA Pro / Hex-Rays decompilers, Hopper, and JEB, under their applicable
-licenses. REA grants no tool license, key, or activation entitlement. Trials and
+licenses. Build Anything grants no tool license, key, or activation entitlement. Trials and
 demos remain subject to vendor terms, including user, feature, automation, and
 output sharing restrictions. Cracked copies, stolen keys, unauthorized key
 sharing, and bypassing license restrictions are not authorized. This guidance

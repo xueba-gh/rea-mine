@@ -1,7 +1,7 @@
 # Linux Hopper embedding-runtime qualification
 
 This follow-up to the [string-record audit](hopper-string-records.md) resolves
-[#5015](https://github.com/morluto/rea/issues/5015): a successful package install
+[#5015](https://github.com/xueba-gh/build-anything/issues/5015): a successful package install
 could leave Hopper unable to start its Python bridge. This is a prerequisite
 correctness fix. It does not establish faster equivalent investigations.
 

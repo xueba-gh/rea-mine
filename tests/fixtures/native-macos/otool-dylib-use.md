@@ -1,7 +1,7 @@
 # Dylib-use otool capture
 
 `otool-dylib-use.txt` is the actual `otool -h -l` stdout retained by the
-[Apple CLI/MCP verification job](https://github.com/morluto/rea/actions/runs/38176410166/job/114579755550).
+[Apple CLI/MCP verification job](https://github.com/xueba-gh/build-anything/actions/runs/38176410166/job/114579755550).
 Only its first filename line was replaced with `/owned/fixture:`.
 
 The source-built application comes from `scripts/verify/apple/macos-bundle.mjs`.

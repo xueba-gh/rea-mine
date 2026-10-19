@@ -162,7 +162,7 @@ export const parseWmSizeOutput = (
 /**
  * Parse `wm density` output. Current builds print labeled physical and
  * optional override lines; older builds print the physical density as a
- * bare number on its own line (morluto/rea#3942). A labeled declaration
+ * bare number on its own line (xueba-gh/build-anything#3942). A labeled declaration
  * wins over a bare one so a mixed dump cannot downgrade the physical value.
  */
 export const parseWmDensityOutput = (

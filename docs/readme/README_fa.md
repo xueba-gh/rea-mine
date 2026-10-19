@@ -9,10 +9,10 @@
 
 **قابلیتی دیده‌اید که دوستش دارید؟ سازوکارش را تا سطح باینری درک کنید.**
 
-[![npm version](https://img.shields.io/npm/v/rea-agents?style=flat-square&color=cb3837)](https://www.npmjs.com/package/rea-agents)
+[![npm version](https://img.shields.io/npm/v/build-anything?style=flat-square&color=cb3837)](https://www.npmjs.com/package/build-anything)
 [![MCP tool catalog](https://img.shields.io/badge/MCP-tool_catalog-5c4ee5?style=flat-square)](../mcp-contracts.md#generated-catalog)
 [![Node.js requirements](https://img.shields.io/badge/Node.js-requirements-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#current-status)
-[![skills.sh](https://skills.sh/b/morluto/rea?style=flat-square)](https://skills.sh/morluto/rea/reverse-engineer-anything)
+[![skills.sh](https://skills.sh/b/xueba-gh/build-anything?style=flat-square)](https://skills.sh/xueba-gh/build-anything/reverse-engineer-anything)
 [![MIT license](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](../../LICENSE)
 [![Discord](https://img.shields.io/discord/1556595354999332884?logo=discord&logoColor=white&label=Discord&color=5865F2)](https://discord.gg/GkcryMnJDM)
 
@@ -22,12 +22,12 @@
 
 [شروع سریع](#شروع-سریع) · [REA چگونه کار می‌کند؟](#rea-چگونه-کار-می‌کند) · [چه چیزهایی را میتوان تحلیل کرد؟](#چه-چیزهایی-را-می‌توان-تحلیل-کرد) · [نمونه‌های عملی](#نمونه‌های-عملی) · [پرسش‌های متداول](#پرسش‌های-متداول) · [ابزارهای GNU objdump و Rizin](../reverse-engineering-tools.md) · [مستندات](#مستندات)
 
-<code>npx rea-agents setup</code>
+<code>npx build-anything setup</code>
 
 </div>
 
 > [!IMPORTANT]
-> منابع رسمی REA: [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
+> منابع رسمی REA: [xueba-gh/build-anything](https://github.com/xueba-gh/build-anything), [rea.tools](https://rea.tools/), [build-anything](https://www.npmjs.com/package/build-anything) (npm).
 > از پیوندهای نصب و انتشار در این منابع رسمی استفاده کنید. نام مشابه مخزن یا README کپی‌شده ثابت نمی‌کند که فایل دانلودی رسمی است.
 
 <div align="center" dir="rtl">
@@ -63,7 +63,7 @@ REA ایجنت شما را به ابزارهایی برای بررسی باین�
 پس از نصب Node.js و npm، دستور زیر را اجرا کنید:
 
 ```bash
-npx rea-agents setup
+npx build-anything setup
 ```
 
 ایجنت‌های موردنظر را انتخاب کنید، تغییرات پیشنهادی را بررسی و تأیید کنید. فرایند راه‌اندازی، سرور MCP مربوط به REA و دستورالعمل‌های گردش‌کار متناظر را اضافه می‌کند و از پیکربندی موجود نسخهٔ پشتیبان می‌گیرد. پس از آن ایجنت خود را مجدداً راه‌اندازی کنید.
@@ -83,7 +83,7 @@ npx rea-agents setup
 برای بررسی پوشهٔ استخراج‌شدهٔ یک برنامهٔ JavaScript/Electron یا فایل ASAR:
 
 ```bash
-npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json
+npx -y build-anything@latest analyze-javascript-application /absolute/path/to/app --json
 ```
 
 نتیجه شامل ماژول‌ها، importها، مرزهای Electron و شواهد مربوط به آن‌هاست. مسیر را با مسیر برنامهٔ هدف جایگزین کنید؛ مثلاً در ویندوز `"D:/apps/example"`.
@@ -91,7 +91,7 @@ npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --
 برای نصب دستور `rea` جهت استفادهٔ مداوم:
 
 ```bash
-npm install --global rea-agents
+npm install --global build-anything
 rea --help
 ```
 
@@ -112,10 +112,10 @@ rea update
 اگر از `npx` استفاده می‌کنید، راه‌اندازی ایجنت را با دستور زیر به‌روز کنید:
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-تغییرات راه‌اندازی را بررسی کنید و ایجنت را دوباره اجرا کنید. برای اجرای یک‌بارهٔ دستورات CLI، از `npx rea-agents@latest` و سپس دستور موردنظر استفاده کنید.
+تغییرات راه‌اندازی را بررسی کنید و ایجنت را دوباره اجرا کنید. برای اجرای یک‌بارهٔ دستورات CLI، از `npx build-anything@latest` و سپس دستور موردنظر استفاده کنید.
 
 ## REA چگونه کار می‌کند؟
 
@@ -182,7 +182,7 @@ API کلیپ‌بورد در renderer را پیدا کنید، مسیر آن ر�
 
 [مطالعهٔ موردی](https://rea.tools/fa/showcase/th04/) · [مخزن بازسازی](https://github.com/N0zoM1z0/th04)
 
-اگر از REA برای بررسی موضوع جالبی استفاده کرده‌اید، خوشحال می‌شویم آن را به اشتراک بگذارید. یک [issue](https://github.com/morluto/rea/issues) یا [pull request](https://github.com/morluto/rea/pulls) ثبت کنید و هدف، پرسش خود، نقش REA و یافته‌هایتان را توضیح دهید.
+اگر از REA برای بررسی موضوع جالبی استفاده کرده‌اید، خوشحال می‌شویم آن را به اشتراک بگذارید. یک [issue](https://github.com/xueba-gh/build-anything/issues) یا [pull request](https://github.com/xueba-gh/build-anything/pulls) ثبت کنید و هدف، پرسش خود، نقش REA و یافته‌هایتان را توضیح دهید.
 
 ## پرسش‌های متداول
 
@@ -206,7 +206,7 @@ REA زمانی که عملیاتی به Hopper نیاز داشته باشد آن
 
 <details><summary><strong>نصب skill از skills.sh چه کاری انجام می‌دهد؟</strong></summary>
 
-این skill دستورالعمل‌های بررسی را برای ایجنت فراهم می‌کند. برای ثبت سرور MCP مربوط به REA و نصب دستورالعمل‌های متناظر، `npx rea-agents setup` را اجرا کنید و سپس ایجنت را مجدداً راه‌اندازی کنید. [نصب مستقل skill](../installation.md#skill-only-installation) را ببینید.
+این skill دستورالعمل‌های بررسی را برای ایجنت فراهم می‌کند. برای ثبت سرور MCP مربوط به REA و نصب دستورالعمل‌های متناظر، `npx build-anything setup` را اجرا کنید و سپس ایجنت را مجدداً راه‌اندازی کنید. [نصب مستقل skill](../installation.md#skill-only-installation) را ببینید.
 
 </details>
 
@@ -235,10 +235,10 @@ rea update
 برای راه‌اندازی ایجنت با `npx`:
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-اگر از ایجنت استفاده می‌کنید، [به‌روزرسانی راه‌اندازی](#به‌روزرسانی-rea) را تکمیل و ایجنت را مجدداً اجرا کنید. همان کار را دوباره امتحان کنید. اگر مشکل ادامه داشت، یک [issue ثبت کنید](https://github.com/morluto/rea/issues) و نسخهٔ REA، نوع هدف، مراحل بازتولید و خروجی خطا را ذکر کنید.
+اگر از ایجنت استفاده می‌کنید، [به‌روزرسانی راه‌اندازی](#به‌روزرسانی-rea) را تکمیل و ایجنت را مجدداً اجرا کنید. همان کار را دوباره امتحان کنید. اگر مشکل ادامه داشت، یک [issue ثبت کنید](https://github.com/xueba-gh/build-anything/issues) و نسخهٔ REA، نوع هدف، مراحل بازتولید و خروجی خطا را ذکر کنید.
 
 </details>
 
@@ -261,7 +261,7 @@ npx rea-agents@latest setup
 
 از همهٔ کسانی که از REA استفاده می‌کنند، خطاها را گزارش می‌دهند، قابلیت‌های جدید پیشنهاد می‌کنند، buildها را آزمایش می‌کنند و در بهبود پروژه مشارکت دارند سپاسگزاریم.
 
-<a href="https://www.star-history.com/?repos=morluto%2Frea&amp;type=date"><picture><source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date&amp;theme=dark&amp;legend=top-left" /><source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" /><img alt="تاریخچهٔ ستاره‌های GitHub پروژهٔ REA" src="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" /></picture></a>
+<a href="https://www.star-history.com/?repos=morluto%2Frea&amp;type=date"><picture><source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date&amp;theme=dark&amp;legend=top-left" /><source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" /><img alt="تاریخچهٔ ستاره‌های GitHub پروژهٔ REA" src="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" /></picture></a>
 
 ## سلب مسئولیت
 
@@ -275,7 +275,7 @@ applicable licenses.
 
 ## مشارکت
 
-از کمک شما به REA استقبال می‌کنیم! برای گزارش خطا یا پیشنهاد قابلیت، یک [issue باز کنید](https://github.com/morluto/rea/issues) یا برای بهبود کد و مستندات [pull request بفرستید](https://github.com/morluto/rea/pulls).
+از کمک شما به REA استقبال می‌کنیم! برای گزارش خطا یا پیشنهاد قابلیت، یک [issue باز کنید](https://github.com/xueba-gh/build-anything/issues) یا برای بهبود کد و مستندات [pull request بفرستید](https://github.com/xueba-gh/build-anything/pulls).
 
 برای راه‌اندازی محیط توسعه و بررسی‌ها، [CONTRIBUTING.md](../../CONTRIBUTING.md)، برای مراحل اعتبارسنجی [آزمایش‌ها](../testing.md) و برای ساختار پروژه [نقشهٔ معماری](../architecture.mermaid) را ببینید.
 

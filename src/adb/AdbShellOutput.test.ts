@@ -212,7 +212,7 @@ describe("parseWmDensityOutput", () => {
   });
 
   // Older builds print the physical density as a bare number
-  // (morluto/rea#3942); it must not be lost as an unread declaration.
+  // (xueba-gh/build-anything#3942); it must not be lost as an unread declaration.
   it("reads a bare numeric density as the physical density", () => {
     expect(parseWmDensityOutput("420\n")).toEqual({
       physical: 420,

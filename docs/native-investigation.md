@@ -583,7 +583,7 @@ x86, x86-64, ARMNT (Thumb-2) and ARM64 PE applications and DLLs, plus explicitly
 on fixed local NTFS volumes. Other raw CPU families remain unsupported on Windows.
 The boundary uses bundled Job Object ownership, protected runtime DACLs, and
 handle-based path admission. See [Windows Ghidra P0](windows-ghidra-p0.md) and
-[issue #527](https://github.com/morluto/rea/issues/527).
+[issue #527](https://github.com/xueba-gh/build-anything/issues/527).
 On Linux and macOS, `annotate_native_function` atomically edits a function name
 and entry comments in the ephemeral database, returning refreshed analysis
 without changing executable bytes. Annotation text must contain no NUL or

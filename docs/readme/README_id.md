@@ -9,10 +9,10 @@
 
 **Melihat fitur yang Anda sukai. Pahami cara kerjanya hingga ke tingkat biner.**
 
-[![npm version](https://img.shields.io/npm/v/rea-agents?style=flat-square&color=cb3837)](https://www.npmjs.com/package/rea-agents)
+[![npm version](https://img.shields.io/npm/v/build-anything?style=flat-square&color=cb3837)](https://www.npmjs.com/package/build-anything)
 [![MCP tool catalog](https://img.shields.io/badge/MCP-tool_catalog-5c4ee5?style=flat-square)](../mcp-contracts.md#generated-catalog)
 [![Node.js requirements](https://img.shields.io/badge/Node.js-requirements-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#current-status)
-[![skills.sh](https://skills.sh/b/morluto/rea?style=flat-square)](https://skills.sh/morluto/rea/reverse-engineer-anything)
+[![skills.sh](https://skills.sh/b/xueba-gh/build-anything?style=flat-square)](https://skills.sh/xueba-gh/build-anything/reverse-engineer-anything)
 [![MIT license](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](../../LICENSE)
 [![Discord](https://img.shields.io/discord/1556595354999332884?logo=discord&logoColor=white&label=Discord&color=5865F2)](https://discord.gg/GkcryMnJDM)
 
@@ -22,12 +22,12 @@
 
 [Mulai Cepat](#mulai-cepat) · [Cara Kerja REA](#cara-kerja-rea) · [Hal yang Dapat Anda Analisis](#hal-yang-dapat-anda-analisis) · [Contoh Penggunaan](#contoh-penggunaan) · [FAQ](#faq) · [Alat GNU objdump dan Rizin](../reverse-engineering-tools.md) · [Dokumentasi](#dokumentasi)
 
-<code>npx rea-agents setup</code>
+<code>npx build-anything setup</code>
 
 </div>
 
 > [!IMPORTANT]
-> Sumber resmi REA: [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
+> Sumber resmi REA: [xueba-gh/build-anything](https://github.com/xueba-gh/build-anything), [rea.tools](https://rea.tools/), [build-anything](https://www.npmjs.com/package/build-anything) (npm).
 > Gunakan tautan instalasi dan rilis dari sumber resmi ini. Nama repositori yang mirip atau README yang disalin tidak membuktikan bahwa unduhan tersebut resmi.
 
 <div align="center">
@@ -71,7 +71,7 @@ Proses penyiapan mendaftarkan REA ke agen Anda dan memasang instruksi alur kerja
 Dengan Node.js dan npm yang telah terpasang, jalankan:
 
 ```bash
-npx rea-agents setup
+npx build-anything setup
 ```
 
 Pilih agen yang ingin digunakan, tinjau perubahan yang diusulkan, lalu setujui perubahan tersebut. Proses penyiapan menambahkan server MCP REA dan instruksi alur kerja yang sesuai, serta membuat cadangan konfigurasi yang sudah ada. Setelah itu, mulai ulang agen Anda.
@@ -91,7 +91,7 @@ Ganti Notes dengan aplikasi target dan fitur yang ingin Anda pahami.
 Periksa direktori aplikasi JavaScript/Electron yang telah diekstrak atau berkas ASAR:
 
 ```bash
-npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json
+npx -y build-anything@latest analyze-javascript-application /absolute/path/to/app --json
 ```
 
 Hasilnya mencakup modul, impor, batas antarkomponen Electron, dan bukti yang mendasarinya. Ganti jalur tersebut dengan lokasi target Anda, misalnya `"D:/apps/example"` di Windows.
@@ -99,7 +99,7 @@ Hasilnya mencakup modul, impor, batas antarkomponen Electron, dan bukti yang men
 Untuk memasang perintah `rea` agar dapat digunakan secara rutin:
 
 ```bash
-npm install --global rea-agents
+npm install --global build-anything
 rea --help
 ```
 
@@ -122,10 +122,10 @@ Untuk memperbarui pendaftaran agen dan skill Anda, jalankan perintah penyiapan y
 Jika Anda menggunakan `npx`, perbarui penyiapan agen dengan:
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-Tinjau perubahan penyiapan dan mulai ulang agen Anda. Untuk menjalankan perintah CLI sekali pakai, gunakan `npx rea-agents@latest` diikuti dengan perintah yang diinginkan. Dengan Bun, gunakan `bunx rea-agents@latest` sebagai pengganti `npx rea-agents@latest`.
+Tinjau perubahan penyiapan dan mulai ulang agen Anda. Untuk menjalankan perintah CLI sekali pakai, gunakan `npx build-anything@latest` diikuti dengan perintah yang diinginkan. Dengan Bun, gunakan `bunx build-anything@latest` sebagai pengganti `npx build-anything@latest`.
 
 ## Cara Kerja REA
 
@@ -205,7 +205,7 @@ Periksa instruksi 16-bit dari gim PC-98 asli, pulihkan perhitungan sudut tetap d
 
 [Baca studi kasus](https://rea.tools/id/showcase/th04/) · [Repositori rekonstruksi](https://github.com/N0zoM1z0/th04)
 
-Jika Anda telah menggunakan REA untuk menganalisis sesuatu yang menarik, kami ingin melihat hasilnya. Bagikan kasus Anda melalui [issue](https://github.com/morluto/rea/issues) atau [pull request](https://github.com/morluto/rea/pulls), sertakan target, pertanyaan Anda, bagaimana REA membantu, dan apa yang Anda temukan.
+Jika Anda telah menggunakan REA untuk menganalisis sesuatu yang menarik, kami ingin melihat hasilnya. Bagikan kasus Anda melalui [issue](https://github.com/xueba-gh/build-anything/issues) atau [pull request](https://github.com/xueba-gh/build-anything/pulls), sertakan target, pertanyaan Anda, bagaimana REA membantu, dan apa yang Anda temukan.
 
 ## FAQ
 
@@ -237,7 +237,7 @@ Lihat [startup dan pemecahan masalah Hopper](../installation.md#launcher-paths-a
 <details>
 <summary><strong>Apa fungsi memasang skill dari skills.sh?</strong></summary>
 
-Skill tersebut menyediakan instruksi investigasi untuk agen Anda. Gunakan `npx rea-agents setup` untuk mendaftarkan server MCP REA dan memasang instruksi yang sesuai, lalu mulai ulang agen Anda.
+Skill tersebut menyediakan instruksi investigasi untuk agen Anda. Gunakan `npx build-anything setup` untuk mendaftarkan server MCP REA dan memasang instruksi yang sesuai, lalu mulai ulang agen Anda.
 
 Lihat [instalasi khusus skill](../installation.md#skill-only-installation).
 
@@ -271,12 +271,12 @@ rea update
 Untuk penyiapan agen melalui `npx`:
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
 Jika Anda menggunakan agen, selesaikan [pembaruan penyiapan](#perbarui-rea) dan mulai ulang agen tersebut.
 
-Coba kembali tugas yang sama. Jika masalah masih terjadi, [buat issue](https://github.com/morluto/rea/issues) dengan menyertakan versi REA, jenis target, langkah-langkah untuk mereproduksi masalah, dan keluaran kesalahan.
+Coba kembali tugas yang sama. Jika masalah masih terjadi, [buat issue](https://github.com/xueba-gh/build-anything/issues) dengan menyertakan versi REA, jenis target, langkah-langkah untuk mereproduksi masalah, dan keluaran kesalahan.
 
 </details>
 
@@ -303,9 +303,9 @@ Terima kasih kepada semua orang yang menggunakan REA, melaporkan bug, meminta fi
 
 <a href="https://www.star-history.com/?repos=morluto%2Frea&amp;type=date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date&amp;theme=dark&amp;legend=top-left" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
-    <img alt="Riwayat bintang GitHub REA" src="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date&amp;theme=dark&amp;legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
+    <img alt="Riwayat bintang GitHub REA" src="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
   </picture>
 </a>
 
@@ -321,7 +321,7 @@ applicable licenses.
 
 ## Kontribusi
 
-Kami sangat menghargai bantuan Anda untuk REA! [Buat issue](https://github.com/morluto/rea/issues) untuk melaporkan bug atau menyarankan fitur, atau [kirim pull request](https://github.com/morluto/rea/pulls) untuk meningkatkan kode atau dokumentasi.
+Kami sangat menghargai bantuan Anda untuk REA! [Buat issue](https://github.com/xueba-gh/build-anything/issues) untuk melaporkan bug atau menyarankan fitur, atau [kirim pull request](https://github.com/xueba-gh/build-anything/pulls) untuk meningkatkan kode atau dokumentasi.
 
 Lihat [CONTRIBUTING.md](../../CONTRIBUTING.md) untuk penyiapan pengembangan dan pemeriksaan, [pengujian](../testing.md) untuk tahapan verifikasi, serta [peta arsitektur](../architecture.mermaid) untuk struktur proyek.
 

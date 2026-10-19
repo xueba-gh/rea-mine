@@ -455,7 +455,7 @@ describe("setup workflow lifecycle and provider planning", () => {
       {
         client: "codex",
         config_path: "/codex.toml",
-        command: ["rea", "mcp"],
+        command: ["bld", "mcp"],
         state: "aligned",
         remediation: null,
       },

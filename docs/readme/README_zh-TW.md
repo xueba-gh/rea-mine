@@ -9,10 +9,10 @@
 
 **看到喜歡的功能，弄清它的工作原理，深入到二進位層面。**
 
-[![npm version](https://img.shields.io/npm/v/rea-agents?style=flat-square&color=cb3837)](https://www.npmjs.com/package/rea-agents)
+[![npm version](https://img.shields.io/npm/v/build-anything?style=flat-square&color=cb3837)](https://www.npmjs.com/package/build-anything)
 [![MCP tool catalog](https://img.shields.io/badge/MCP-tool_catalog-5c4ee5?style=flat-square)](../mcp-contracts.md#generated-catalog)
 [![Node.js requirements](https://img.shields.io/badge/Node.js-requirements-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#current-status)
-[![skills.sh](https://skills.sh/b/morluto/rea?style=flat-square)](https://skills.sh/morluto/rea/reverse-engineer-anything)
+[![skills.sh](https://skills.sh/b/xueba-gh/build-anything?style=flat-square)](https://skills.sh/xueba-gh/build-anything/reverse-engineer-anything)
 [![MIT license](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](../../LICENSE)
 [![Discord](https://img.shields.io/discord/1556595354999332884?logo=discord&logoColor=white&label=Discord&color=5865F2)](https://discord.gg/GkcryMnJDM)
 
@@ -22,12 +22,12 @@
 
 [快速開始](#快速開始) · [REA 的工作原理](#rea-的工作原理) · [可以分析什麼](#可以分析什麼) · [案例](#案例) · [常見問題](#常見問題) · [GNU objdump 與 Rizin 工具](../reverse-engineering-tools.md) · [文件](#文件)
 
-<code>npx rea-agents setup</code>
+<code>npx build-anything setup</code>
 
 </div>
 
 > [!IMPORTANT]
-> REA 官方來源： [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
+> REA 官方來源： [xueba-gh/build-anything](https://github.com/xueba-gh/build-anything), [rea.tools](https://rea.tools/), [build-anything](https://www.npmjs.com/package/build-anything) (npm).
 > 請透過這些官方來源提供的安裝與發布連結取得 REA。相似的儲存庫名稱或複製的 README 不能證明下載內容來自官方。
 
 <div align="center">
@@ -71,7 +71,7 @@ REA 將 AI 代理連接到分析工具，用於檢查原生二進位檔案、Jav
 安裝 Node.js 和 npm 後，執行：
 
 ```bash
-npx rea-agents setup
+npx build-anything setup
 ```
 
 選擇 AI 代理，檢查計劃中的變更並核准。設定流程會添加 REA 的 MCP 服務和對應的工作流程指引，並備份已有組態。完成後重新啟動 AI 代理。
@@ -91,7 +91,7 @@ npx rea-agents setup
 檢查已解包的 JavaScript/Electron 應用目錄或 ASAR 檔案：
 
 ```bash
-npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json
+npx -y build-anything@latest analyze-javascript-application /absolute/path/to/app --json
 ```
 
 結果包含模組、匯入、Electron 邊界及相關證據。將路徑替換為你的目標路徑，例如 Windows 上的 `"D:/apps/example"`。
@@ -99,7 +99,7 @@ npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --
 如果需要經常使用，可以安裝 `rea` 命令：
 
 ```bash
-npm install --global rea-agents
+npm install --global build-anything
 rea --help
 ```
 
@@ -122,10 +122,10 @@ Bun 全域更新需要 Bun 1.2.17 或更新版本。如果使用較舊的 Bun �
 如果使用 `npx`，通過以下命令更新 AI 代理設定：
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-檢查設定變更並重新啟動 AI 代理。單次 CLI 操作可使用 `npx rea-agents@latest`，後接所需命令。使用 Bun 時，用 `bunx rea-agents@latest` 代替 `npx rea-agents@latest`。
+檢查設定變更並重新啟動 AI 代理。單次 CLI 操作可使用 `npx build-anything@latest`，後接所需命令。使用 Bun 時，用 `bunx build-anything@latest` 代替 `npx build-anything@latest`。
 
 ## REA 的工作原理
 
@@ -196,7 +196,7 @@ REA 需要 Node.js 22.x（>=22.19）、24.x（>=24.11）或 26+，以及 npm。�
 [閱讀案例](https://rea.tools/zh-TW/showcase/th04/) ·
 [重建專案儲存庫](https://github.com/N0zoM1z0/th04)
 
-如果你用 REA 分析了有趣的目標，我們很想瞭解。歡迎通過 [issue](https://github.com/morluto/rea/issues) 或 [pull request](https://github.com/morluto/rea/pulls) 分享案例，說明目標、你的問題、REA 如何提供幫助，以及你的發現。
+如果你用 REA 分析了有趣的目標，我們很想瞭解。歡迎通過 [issue](https://github.com/xueba-gh/build-anything/issues) 或 [pull request](https://github.com/xueba-gh/build-anything/pulls) 分享案例，說明目標、你的問題、REA 如何提供幫助，以及你的發現。
 
 ## 常見問題
 
@@ -224,7 +224,7 @@ REA 會在操作需要時啟動 Hopper。在 macOS 上，首次執行時可能�
 <details>
 <summary><strong>從 skills.sh 安裝 skill 有什麼作用？</strong></summary>
 
-skill 為 AI 代理提供調查指引。使用 `npx rea-agents setup` 註冊 REA 的 MCP 服務並安裝對應的指引，然後重新啟動 AI 代理。見[僅安裝 skill](../installation.md#skill-only-installation)。
+skill 為 AI 代理提供調查指引。使用 `npx build-anything setup` 註冊 REA 的 MCP 服務並安裝對應的指引，然後重新啟動 AI 代理。見[僅安裝 skill](../installation.md#skill-only-installation)。
 
 </details>
 
@@ -256,10 +256,10 @@ rea update
 通過 `npx` 設定 AI 代理時使用：
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-如果正在使用 AI 代理，請完成[設定更新](#更新-rea)並重新啟動 AI 代理。重試同一任務。如果問題仍然存在，請[提交 issue](https://github.com/morluto/rea/issues)，附上 REA 版本、目標類型、復現步驟和錯誤輸出。
+如果正在使用 AI 代理，請完成[設定更新](#更新-rea)並重新啟動 AI 代理。重試同一任務。如果問題仍然存在，請[提交 issue](https://github.com/xueba-gh/build-anything/issues)，附上 REA 版本、目標類型、復現步驟和錯誤輸出。
 
 </details>
 
@@ -284,9 +284,9 @@ npx rea-agents@latest setup
 
 <a href="https://www.star-history.com/?repos=morluto%2Frea&amp;type=date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date&amp;theme=dark&amp;legend=top-left" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
-    <img alt="REA 的 GitHub Star 歷史" src="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date&amp;theme=dark&amp;legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
+    <img alt="REA 的 GitHub Star 歷史" src="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
   </picture>
 </a>
 
@@ -301,7 +301,7 @@ REA 用於合法的研究、教育、互通性、軟體保存，以及分析你�
 
 ## 參與貢獻
 
-歡迎幫助改進 REA！你可以[提交 issue](https://github.com/morluto/rea/issues) 報告錯誤或建議功能，也可以[提交 pull request](https://github.com/morluto/rea/pulls) 改進程式碼或文件。
+歡迎幫助改進 REA！你可以[提交 issue](https://github.com/xueba-gh/build-anything/issues) 報告錯誤或建議功能，也可以[提交 pull request](https://github.com/xueba-gh/build-anything/pulls) 改進程式碼或文件。
 
 開發設定和檢查見 [CONTRIBUTING.md](../../CONTRIBUTING.md)，驗證流程見[測試指南](../testing.md)，專案結構見[架構圖](../architecture.mermaid)。
 

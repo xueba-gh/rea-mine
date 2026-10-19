@@ -9,10 +9,10 @@
 
 **Thấy một tính năng bạn thích? Hiểu cách nó hoạt động, đến tận mức mã nhị phân.**
 
-[![npm version](https://img.shields.io/npm/v/rea-agents?style=flat-square&color=cb3837)](https://www.npmjs.com/package/rea-agents)
+[![npm version](https://img.shields.io/npm/v/build-anything?style=flat-square&color=cb3837)](https://www.npmjs.com/package/build-anything)
 [![MCP tool catalog](https://img.shields.io/badge/MCP-tool_catalog-5c4ee5?style=flat-square)](../mcp-contracts.md#generated-catalog)
 [![Node.js requirements](https://img.shields.io/badge/Node.js-requirements-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#current-status)
-[![skills.sh](https://skills.sh/b/morluto/rea?style=flat-square)](https://skills.sh/morluto/rea/reverse-engineer-anything)
+[![skills.sh](https://skills.sh/b/xueba-gh/build-anything?style=flat-square)](https://skills.sh/xueba-gh/build-anything/reverse-engineer-anything)
 [![MIT license](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](../../LICENSE)
 [![Discord](https://img.shields.io/discord/1556595354999332884?logo=discord&logoColor=white&label=Discord&color=5865F2)](https://discord.gg/GkcryMnJDM)
 
@@ -22,12 +22,12 @@
 
 [Bắt đầu nhanh](#bắt-đầu-nhanh) · [Cách REA hoạt động](#cách-rea-hoạt-động) · [Những gì bạn có thể phân tích](#những-gì-bạn-có-thể-phân-tích) · [Các nghiên cứu điển hình](#các-nghiên-cứu-điển-hình) · [Câu hỏi thường gặp](#câu-hỏi-thường-gặp) · [Công cụ GNU objdump và Rizin](../reverse-engineering-tools.md) · [Tài liệu](#tài-liệu)
 
-<code>npx rea-agents setup</code>
+<code>npx build-anything setup</code>
 
 </div>
 
 > [!IMPORTANT]
-> Các nguồn chính thức của REA: [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
+> Các nguồn chính thức của REA: [xueba-gh/build-anything](https://github.com/xueba-gh/build-anything), [rea.tools](https://rea.tools/), [build-anything](https://www.npmjs.com/package/build-anything) (npm).
 > Hãy dùng các liên kết cài đặt và bản phát hành từ những nguồn chính thức này. Tên kho mã tương tự hoặc README được sao chép không chứng minh rằng tệp tải xuống là bản chính thức.
 
 <div align="center">
@@ -71,7 +71,7 @@ Quá trình thiết lập đăng ký REA với tác nhân và cài đặt các h
 Sau khi cài Node.js và npm, chạy:
 
 ```bash
-npx rea-agents setup
+npx build-anything setup
 ```
 
 Chọn các tác nhân, xem lại những thay đổi được đề xuất và chấp thuận. Quá trình thiết lập thêm máy chủ MCP của REA cùng hướng dẫn quy trình tương ứng, đồng thời sao lưu cấu hình hiện có. Sau đó khởi động lại tác nhân.
@@ -91,7 +91,7 @@ Thay Notes bằng ứng dụng mục tiêu và chỉ rõ tính năng bạn muố
 Kiểm tra thư mục ứng dụng JavaScript/Electron đã giải nén hoặc tệp ASAR:
 
 ```bash
-npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json
+npx -y build-anything@latest analyze-javascript-application /absolute/path/to/app --json
 ```
 
 Kết quả bao gồm mô-đun, các khai báo import, ranh giới Electron và bằng chứng tương ứng. Thay đường dẫn bằng mục tiêu của bạn, chẳng hạn `"D:/apps/example"` trên Windows.
@@ -99,7 +99,7 @@ Kết quả bao gồm mô-đun, các khai báo import, ranh giới Electron và 
 Để cài lệnh `rea` cho việc sử dụng thường xuyên:
 
 ```bash
-npm install --global rea-agents
+npm install --global build-anything
 rea --help
 ```
 
@@ -120,10 +120,10 @@ rea update
 Nếu dùng `npx`, cập nhật thiết lập tác nhân bằng:
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-Xem lại thay đổi cấu hình và khởi động lại tác nhân. Với lệnh CLI dùng một lần, dùng `npx rea-agents@latest` rồi thêm lệnh cần chạy.
+Xem lại thay đổi cấu hình và khởi động lại tác nhân. Với lệnh CLI dùng một lần, dùng `npx build-anything@latest` rồi thêm lệnh cần chạy.
 
 ## Cách REA hoạt động
 
@@ -190,7 +190,7 @@ Kiểm tra các lệnh 16 bit của trò chơi PC-98 gốc, khôi phục phép t
 
 [Đọc nghiên cứu điển hình](https://rea.tools/vi/showcase/th04/) · [Kho mã tái tạo](https://github.com/N0zoM1z0/th04)
 
-Nếu bạn dùng REA cho một mục tiêu thú vị, chúng tôi muốn biết. Chia sẻ trường hợp của bạn qua [issue](https://github.com/morluto/rea/issues) hoặc [pull request](https://github.com/morluto/rea/pulls), nêu mục tiêu, câu hỏi, cách REA giúp bạn và những gì tìm được.
+Nếu bạn dùng REA cho một mục tiêu thú vị, chúng tôi muốn biết. Chia sẻ trường hợp của bạn qua [issue](https://github.com/xueba-gh/build-anything/issues) hoặc [pull request](https://github.com/xueba-gh/build-anything/pulls), nêu mục tiêu, câu hỏi, cách REA giúp bạn và những gì tìm được.
 
 ## Câu hỏi thường gặp
 
@@ -218,7 +218,7 @@ REA khởi chạy Hopper khi một thao tác cần đến nó. Trên macOS, hộ
 <details>
 <summary><strong>Cài skill từ skills.sh có tác dụng gì?</strong></summary>
 
-Skill cung cấp hướng dẫn điều tra cho tác nhân. Dùng `npx rea-agents setup` để đăng ký máy chủ MCP của REA và cài hướng dẫn tương ứng, sau đó khởi động lại tác nhân. Xem [chỉ cài skill](../installation.md#skill-only-installation).
+Skill cung cấp hướng dẫn điều tra cho tác nhân. Dùng `npx build-anything setup` để đăng ký máy chủ MCP của REA và cài hướng dẫn tương ứng, sau đó khởi động lại tác nhân. Xem [chỉ cài skill](../installation.md#skill-only-installation).
 
 </details>
 
@@ -250,10 +250,10 @@ rea update
 Với thiết lập tác nhân qua `npx`:
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-Nếu dùng tác nhân, hãy hoàn tất [làm mới thiết lập](#cập-nhật-rea) và khởi động lại nó. Thử lại cùng tác vụ. Nếu vấn đề vẫn còn, [mở issue](https://github.com/morluto/rea/issues) với phiên bản REA, loại mục tiêu, các bước tái hiện và đầu ra lỗi.
+Nếu dùng tác nhân, hãy hoàn tất [làm mới thiết lập](#cập-nhật-rea) và khởi động lại nó. Thử lại cùng tác vụ. Nếu vấn đề vẫn còn, [mở issue](https://github.com/xueba-gh/build-anything/issues) với phiên bản REA, loại mục tiêu, các bước tái hiện và đầu ra lỗi.
 
 </details>
 
@@ -278,9 +278,9 @@ Cảm ơn mọi người đã sử dụng REA, báo lỗi, đề xuất tính n�
 
 <a href="https://www.star-history.com/?repos=morluto%2Frea&amp;type=date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date&amp;theme=dark&amp;legend=top-left" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
-    <img alt="Lịch sử sao GitHub của REA" src="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date&amp;theme=dark&amp;legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
+    <img alt="Lịch sử sao GitHub của REA" src="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
   </picture>
 </a>
 
@@ -296,7 +296,7 @@ applicable licenses.
 
 ## Đóng góp
 
-Chúng tôi hoan nghênh bạn giúp phát triển REA! [Mở issue](https://github.com/morluto/rea/issues) để báo lỗi hoặc đề xuất tính năng, hoặc [gửi pull request](https://github.com/morluto/rea/pulls) để cải thiện mã hay tài liệu.
+Chúng tôi hoan nghênh bạn giúp phát triển REA! [Mở issue](https://github.com/xueba-gh/build-anything/issues) để báo lỗi hoặc đề xuất tính năng, hoặc [gửi pull request](https://github.com/xueba-gh/build-anything/pulls) để cải thiện mã hay tài liệu.
 
 Xem [CONTRIBUTING.md](../../CONTRIBUTING.md) về thiết lập môi trường phát triển và các bước kiểm tra, [hướng dẫn kiểm thử](../testing.md) về các luồng xác minh và [sơ đồ kiến trúc](../architecture.mermaid) về cấu trúc dự án.
 

@@ -1461,7 +1461,7 @@ it("inspects the display and window focus", async () => {
 });
 
 // Older builds print `wm density` as a bare number; the display projection
-// must keep it as the physical density (morluto/rea#3942).
+// must keep it as the physical density (xueba-gh/build-anything#3942).
 it("keeps a bare numeric wm density as the physical density", async () => {
   const { binary } = await writeAdbStub(
     shellStub({

@@ -153,7 +153,7 @@ fails before a browser process exists, such as for a missing executable.
 POSIX wrappers can request awaited cancellation with `SIGINT` or `SIGTERM`;
 Windows process termination is not an equivalent graceful-cancellation channel.
 Do not identify owned artifacts by directory prefix or creation time alone.
-See [#4659](https://github.com/morluto/rea/issues/4659) for the remaining recovery
+See [#4659](https://github.com/xueba-gh/build-anything/issues/4659) for the remaining recovery
 and wrapper-cancellation work.
 
 Keeping that browser alive does not guarantee its emulation state survives.
@@ -163,7 +163,7 @@ cannot snapshot the other client's complete user-agent/client-hint settings and
 does not replay a partial reconstruction. Use launch mode to keep this effect
 inside a provider-owned browser, or have the external owning client reapply its
 complete configuration after capture. Connected captures report this limitation;
-see [issue #4089](https://github.com/morluto/rea/issues/4089).
+see [issue #4089](https://github.com/xueba-gh/build-anything/issues/4089).
 
 `environment.locale` sets Intl formatting in both modes. Launch also sets
 `navigator.language`, `navigator.languages`, and the request `Accept-Language`.

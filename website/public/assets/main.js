@@ -142,11 +142,14 @@ async function initializeWebsite() {
     if (count === null || count === undefined) return;
 
     try {
-      const response = await fetch("https://api.github.com/repos/morluto/rea", {
-        headers: { Accept: "application/vnd.github+json" },
-        credentials: "omit",
-        signal: AbortSignal.timeout(5000),
-      });
+      const response = await fetch(
+        "https://api.github.com/repos/xueba-gh/build-anything",
+        {
+          headers: { Accept: "application/vnd.github+json" },
+          credentials: "omit",
+          signal: AbortSignal.timeout(5000),
+        },
+      );
       if (!response.ok) return;
       const repository = await response.json();
       const stars = repository.stargazers_count;

@@ -83,7 +83,7 @@ not import the production projector. Later export samples reuse the same
 immutable export. View samples precede diagnostic export and CLI verification.
 
 All costly commands run serially with the preserved
-[resource observer](https://github.com/morluto/rea/blob/b3bdabab694af1f9801eff7caf75001b92314a58/experiments/analysis-efficiency/resource-run.py)
+[resource observer](https://github.com/xueba-gh/build-anything/blob/b3bdabab694af1f9801eff7caf75001b92314a58/experiments/analysis-efficiency/resource-run.py)
 using `--memory-gib 8 --observe-payload-exit`: one CPU, 8 GiB hard limit,
 6 GiB early stop, no swap, 192 tasks; Node heap 2 GiB, `UV_THREADPOOL_SIZE=1`,
 `GOMAXPROCS=1`, `GOMEMLIMIT=3GiB`. Observer hashes and cleanup receipts are in JSON.

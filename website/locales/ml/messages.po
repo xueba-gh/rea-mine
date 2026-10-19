@@ -1352,7 +1352,7 @@ msgid "Evidence and model attribution"
 msgstr ""
 
 #. {ph0}: <a
-#. href="https://github.com/morluto/rea/blob/main/website/evidence/reverse-
+#. href="https://github.com/xueba-gh/build-anything/blob/main/website/evidence/reverse-
 #. engineering-models.md" >
 #. {ph1}: </a >
 #: website/public/blog/reverse-engineering-models/index.html:781
@@ -2829,7 +2829,7 @@ msgctxt "page:contributors/index.html"
 msgid "Find a contributor"
 msgstr ""
 
-#. {ph0}: <a href="https://github.com/morluto/rea/graphs/contributors">
+#. {ph0}: <a href="https://github.com/xueba-gh/build-anything/graphs/contributors">
 #. {ph1}: </a>
 #. {ph2}: <time datetime="2026-10-15" translate="no">2026-10-15</time>
 #: website/public/contributors/index.html:1112
@@ -3389,7 +3389,7 @@ msgctxt "page:faq/index.html"
 msgid "Terminal · refresh agent setup"
 msgstr ""
 
-#. {ph0}: <code>npx -y rea-agents@latest</code>
+#. {ph0}: <code>npx -y build-anything@latest</code>
 #: website/public/faq/index.html:301
 #, python-brace-format
 msgctxt "page:faq/index.html"
@@ -3678,7 +3678,7 @@ msgid ""
 "release may already fix the problem."
 msgstr ""
 
-#. {ph0}: <a href="https://github.com/morluto/rea/issues/new/choose" >
+#. {ph0}: <a href="https://github.com/xueba-gh/build-anything/issues/new/choose" >
 #. {ph1}: </a >
 #: website/public/faq/index.html:515
 #, python-brace-format
@@ -3711,9 +3711,9 @@ msgctxt "page:faq/index.html"
 msgid "How can I share an example or contribute?"
 msgstr ""
 
-#. {ph0}: <a href="https://github.com/morluto/rea/issues/new/choose" >
+#. {ph0}: <a href="https://github.com/xueba-gh/build-anything/issues/new/choose" >
 #. {ph1}: </a >
-#. {ph2}: <a href="https://github.com/morluto/rea/pulls">
+#. {ph2}: <a href="https://github.com/xueba-gh/build-anything/pulls">
 #. {ph3}: </a >
 #: website/public/faq/index.html:541
 #, python-brace-format
@@ -3921,7 +3921,7 @@ msgstr ""
 #. {ph0}: <span class="prompt-symbol" aria-hidden="true">
 #. {ph1}: </span >
 #. {ph2}: <span id="first-install-prompt" >
-#. {ph3}: <span translate="no">npx rea-agents@latest setup</span>
+#. {ph3}: <span translate="no">npx build-anything@latest setup</span>
 #. {ph4}: </span >
 #. {ph5}: <span class="terminal-cursor" aria-hidden="true">
 #. {ph6}: </span>
@@ -4760,7 +4760,7 @@ msgstr ""
 
 #. {ph0}: <a href="https://claude.ai/download">
 #. {ph1}: </a>
-#. {ph2}: <a href="https://github.com/morluto/rea/blob/main/docs/client-
+#. {ph2}: <a href="https://github.com/xueba-gh/build-anything/blob/main/docs/client-
 #. configuration.md#claude-desktop" >
 #. {ph3}: </a >
 #: website/public/get-started/index.html:595
@@ -4832,11 +4832,11 @@ msgid ""
 "build or a release containing those integrations."
 msgstr ""
 
-#. {ph0}: <a href="https://github.com/morluto/rea/blob/main/docs/client-
+#. {ph0}: <a href="https://github.com/xueba-gh/build-anything/blob/main/docs/client-
 #. configuration.md" >
 #. {ph1}: </a >
 #. {ph2}: <a
-#. href="https://github.com/morluto/rea/blob/main/docs/installation.md#released-
+#. href="https://github.com/xueba-gh/build-anything/blob/main/docs/installation.md#released-
 #. package-and-main" >
 #. {ph3}: </a >
 #: website/public/get-started/index.html:724
@@ -4861,7 +4861,7 @@ msgid ""
 " command on the Bot's computer:"
 msgstr ""
 
-#. {ph0}: <a href="https://github.com/morluto/rea/blob/main/docs/client-
+#. {ph0}: <a href="https://github.com/xueba-gh/build-anything/blob/main/docs/client-
 #. configuration.md#other-client-settings" >
 #. {ph1}: </a >
 #: website/public/get-started/index.html:755
@@ -4897,7 +4897,7 @@ msgstr ""
 #. {ph0}: <span class="prompt-symbol" aria-hidden="true">
 #. {ph1}: </span >
 #. {ph2}: <span id="agent-install-prompt" >
-#. {ph3}: <span translate="no">npx rea-agents@latest setup</span>
+#. {ph3}: <span translate="no">npx build-anything@latest setup</span>
 #. {ph4}: </span >
 #. {ph5}: <span class="terminal-cursor" aria-hidden="true">
 #. {ph6}: </span>
@@ -5233,7 +5233,7 @@ msgid ""
 msgstr ""
 
 #. {ph0}: <a
-#. href="https://github.com/morluto/rea/blob/main/docs/installation.md#hopper"
+#. href="https://github.com/xueba-gh/build-anything/blob/main/docs/installation.md#hopper"
 #. >
 #. {ph1}: </a >
 #: website/public/get-started/index.html:1063
@@ -5341,7 +5341,7 @@ msgid ""
 msgstr ""
 
 #. {ph0}: <a
-#. href="https://github.com/morluto/rea/blob/main/docs/installation.md#missing-
+#. href="https://github.com/xueba-gh/build-anything/blob/main/docs/installation.md#missing-
 #. macos-native-decompiler" >
 #. {ph1}: </a >
 #: website/public/get-started/index.html:1180
@@ -5351,7 +5351,7 @@ msgid "{ph0}macOS · Intel{ph1}"
 msgstr ""
 
 #. {ph0}: <a
-#. href="https://github.com/morluto/rea/blob/main/docs/installation.md#macos-
+#. href="https://github.com/xueba-gh/build-anything/blob/main/docs/installation.md#macos-
 #. arm64-native-decompiler" >
 #. {ph1}: </a >
 #: website/public/get-started/index.html:1186
@@ -5384,10 +5384,10 @@ msgid ""
 msgstr ""
 
 #. {ph0}: <a
-#. href="https://github.com/morluto/rea/blob/main/docs/installation.md#ghidra"
+#. href="https://github.com/xueba-gh/build-anything/blob/main/docs/installation.md#ghidra"
 #. >
 #. {ph1}: </a >
-#. {ph2}: <a href="https://github.com/morluto/rea/blob/main/docs/windows-
+#. {ph2}: <a href="https://github.com/xueba-gh/build-anything/blob/main/docs/windows-
 #. ghidra-p0.md" >
 #. {ph3}: </a >
 #: website/public/get-started/index.html:1222
@@ -5420,7 +5420,7 @@ msgid ""
 msgstr ""
 
 #. {ph0}: <a
-#. href="https://github.com/morluto/rea/blob/main/CONTRIBUTING.md#development-
+#. href="https://github.com/xueba-gh/build-anything/blob/main/CONTRIBUTING.md#development-
 #. setup" >
 #. {ph1}: </a >
 #. {ph2}: <code>6.4.0</code>
@@ -5490,7 +5490,7 @@ msgid ""
 "rerun setup and restart your agent."
 msgstr ""
 
-#. {ph0}: <a href="https://github.com/morluto/rea/blob/main/docs/ida-
+#. {ph0}: <a href="https://github.com/xueba-gh/build-anything/blob/main/docs/ida-
 #. provider.md" >
 #. {ph1}: </a >
 #: website/public/get-started/index.html:1340
@@ -5654,13 +5654,13 @@ msgctxt "page:get-started/index.html"
 msgid "Process behavior"
 msgstr ""
 
-#. {ph0}: <a href="https://github.com/morluto/rea/blob/main/docs/flutter-
+#. {ph0}: <a href="https://github.com/xueba-gh/build-anything/blob/main/docs/flutter-
 #. analysis.md" >
 #. {ph1}: </a >
-#. {ph2}: <a href="https://github.com/morluto/rea/blob/main/docs/javascript-
+#. {ph2}: <a href="https://github.com/xueba-gh/build-anything/blob/main/docs/javascript-
 #. artifact-reconstruction.md" >
 #. {ph3}: </a >
-#. {ph4}: <a href="https://github.com/morluto/rea/blob/main/docs/evm-
+#. {ph4}: <a href="https://github.com/xueba-gh/build-anything/blob/main/docs/evm-
 #. bytecode.md" >
 #. {ph5}: </a >
 #. {ph6}: <a href="../guides/">
@@ -5898,7 +5898,7 @@ msgid ""
 msgstr ""
 
 #. {ph0}: <code>rea update</code>
-#. {ph1}: <code>npx rea-agents@latest uninstall</code>
+#. {ph1}: <code>npx build-anything@latest uninstall</code>
 #: website/public/get-started/index.html:1770
 #, python-brace-format
 msgctxt "page:get-started/index.html"
@@ -5908,7 +5908,7 @@ msgid ""
 msgstr ""
 
 #. {ph0}: <a
-#. href="https://github.com/morluto/rea/blob/main/docs/installation.md#diagnose-
+#. href="https://github.com/xueba-gh/build-anything/blob/main/docs/installation.md#diagnose-
 #. update-and-remove" >
 #. {ph1}: </a >
 #: website/public/get-started/index.html:1776
@@ -5940,7 +5940,7 @@ msgid ""
 " Electron app and a browser.{ph3}"
 msgstr ""
 
-#. {ph0}: <a href="https://github.com/morluto/rea/issues">
+#. {ph0}: <a href="https://github.com/xueba-gh/build-anything/issues">
 #. {ph1}: </a >
 #. {ph2}: <span>
 #. {ph3}: </span>
@@ -6475,7 +6475,7 @@ msgid ""
 "{ph0}application workflow{ph1} to follow files and process boundaries."
 msgstr ""
 
-#. {ph0}: <a href="https://github.com/morluto/rea/blob/main/docs/web-network-
+#. {ph0}: <a href="https://github.com/xueba-gh/build-anything/blob/main/docs/web-network-
 #. captures.md" >
 #. {ph1}: </a >
 #: website/public/guides/browser/index.html:485
@@ -7844,7 +7844,7 @@ msgstr ""
 #. {ph0}: <span class="prompt-symbol" aria-hidden="true">
 #. {ph1}: </span >
 #. {ph2}: <span id="home-install-prompt" >
-#. {ph3}: <span translate="no">npx rea-agents@latest setup</span>
+#. {ph3}: <span translate="no">npx build-anything@latest setup</span>
 #. {ph4}: </span >
 #. {ph5}: <span class="terminal-cursor" aria-hidden="true">
 #. {ph6}: </span>
@@ -8904,7 +8904,7 @@ msgctxt "page:index.html"
 msgid "{ph0}Join Discord{ph1} — get help and discuss your investigations."
 msgstr ""
 
-#. {ph0}: <a href="https://github.com/morluto/rea/issues/new/choose" >
+#. {ph0}: <a href="https://github.com/xueba-gh/build-anything/issues/new/choose" >
 #. {ph1}: </a >
 #: website/public/index.html:1202
 #, python-brace-format
@@ -10285,7 +10285,7 @@ msgstr ""
 #. squares-flag-checker/ctfcli.yaml" >
 #. {ph3}: </a >
 #. {ph4}: <a
-#. href="https://github.com/morluto/rea/blob/main/website/evidence/ctf-masked-
+#. href="https://github.com/xueba-gh/build-anything/blob/main/website/evidence/ctf-masked-
 #. squares.md" >
 #. {ph5}: </a >
 #: website/public/showcase/ctf/index.html:702

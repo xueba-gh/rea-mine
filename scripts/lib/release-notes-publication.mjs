@@ -104,7 +104,10 @@ export async function verifyNotesPublication(run, options) {
   if (valid(baseline) !== baseline || baseline.includes("+"))
     throw new Error("Invalid release baseline version");
   const baselineSha = (
-    await run("git", ["rev-parse", `refs/tags/rea-agents-${baseline}^{commit}`])
+    await run("git", [
+      "rev-parse",
+      `refs/tags/build-anything-${baseline}^{commit}`,
+    ])
   ).trim();
   if (inventory.base !== baselineSha)
     throw new Error(

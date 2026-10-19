@@ -66,7 +66,7 @@ def check_repository_links(root):
                 errors.append(f"{path.relative_to(root)}: obsolete website URL: {reference}")
                 continue
             if url.hostname == "github.com":
-                match = re.match(r"^/morluto/rea/(?:blob|tree)/main/(.+)$", url.path)
+                match = re.match(r"^/xueba-gh/build-anything/(?:blob|tree)/main/(.+)$", url.path)
                 if not match:
                     continue
                 target = (root / unquote(match[1])).resolve()

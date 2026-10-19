@@ -704,8 +704,8 @@ describe("platform-aware client config paths", () => {
 
 describe("client registration command ownership", () => {
   it.skipIf(process.platform === "win32").each([
-    ["rea", "rea-agents"],
-    ["rea-agents", "rea"],
+    ["rea", "build-anything"],
+    ["build-anything", "rea"],
   ])(
     "recognizes %s through its %s launcher alias",
     async (registered, current) => {
@@ -734,9 +734,9 @@ describe("client registration command ownership", () => {
       await writeFile(owned, "// owned\n");
       await writeFile(foreign, "// foreign\n");
       await symlink(owned, join(root, "rea"));
-      await symlink(foreign, join(root, "rea-agents"));
+      await symlink(foreign, join(root, "build-anything"));
       await symlink(join(root, "missing.mjs"), join(root, "missing"));
-      for (const candidate of ["rea-agents", "missing"]) {
+      for (const candidate of ["build-anything", "missing"]) {
         const command = [join(root, candidate), "mcp"];
         expect(
           classifyClientRegistrationCommand(command, join(root, "rea")),

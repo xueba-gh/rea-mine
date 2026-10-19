@@ -9,10 +9,10 @@
 
 **നിങ്ങൾക്ക് ഇഷ്ടപ്പെട്ട ഒരു feature കണ്ടോ? അത് എങ്ങനെ പ്രവർത്തിക്കുന്നു എന്ന് binary തലത്തിലേക്ക് വരെ മനസ്സിലാക്കൂ.**
 
-[![npm version](https://img.shields.io/npm/v/rea-agents?style=flat-square&color=cb3837)](https://www.npmjs.com/package/rea-agents)
+[![npm version](https://img.shields.io/npm/v/build-anything?style=flat-square&color=cb3837)](https://www.npmjs.com/package/build-anything)
 [![MCP tool catalog](https://img.shields.io/badge/MCP-tool_catalog-5c4ee5?style=flat-square)](../mcp-contracts.md#generated-catalog)
 [![Node.js requirements](https://img.shields.io/badge/Node.js-requirements-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#what-you-can-analyze)
-[![skills.sh](https://skills.sh/b/morluto/rea?style=flat-square)](https://skills.sh/morluto/rea/reverse-engineer-anything)
+[![skills.sh](https://skills.sh/b/xueba-gh/build-anything?style=flat-square)](https://skills.sh/xueba-gh/build-anything/reverse-engineer-anything)
 [![MIT license](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](../../LICENSE)
 [![Discord](https://img.shields.io/discord/1556595354999332884?logo=discord&logoColor=white&label=Discord&color=5865F2)](https://discord.gg/GkcryMnJDM)
 
@@ -22,13 +22,13 @@
 
 [ദ്രുതാരംഭം](#ദ്രുതാരംഭം) · [REA എങ്ങനെ പ്രവർത്തിക്കുന്നു](#rea-എങ്ങനെ-പ്രവർത്തിക്കുന്നു) · [എന്തൊക്കെ വിശകലനം ചെയ്യാം](#എന്തൊക്കെ-വിശകലനം-ചെയ്യാം) · [ഉദാഹരണങ്ങൾ](#ഉദാഹരണങ്ങൾ) · [പതിവുചോദ്യങ്ങൾ](#പതിവുചോദ്യങ്ങൾ) · [ഡോക്യുമെന്റേഷൻ](#ഡോക്യുമെന്റേഷൻ)
 
-<code>npx rea-agents setup</code>
+<code>npx build-anything setup</code>
 
 </div>
 
 > [!IMPORTANT]
-> REA ലഭ്യമാക്കേണ്ടത് [morluto/rea](https://github.com/morluto/rea),
-> [rea.tools](https://rea.tools/), അല്ലെങ്കിൽ [rea-agents npm package](https://www.npmjs.com/package/rea-agents) എന്നിവയിൽ നിന്നാണ്.
+> REA ലഭ്യമാക്കേണ്ടത് [xueba-gh/build-anything](https://github.com/xueba-gh/build-anything),
+> [rea.tools](https://rea.tools/), അല്ലെങ്കിൽ [build-anything npm package](https://www.npmjs.com/package/build-anything) എന്നിവയിൽ നിന്നാണ്.
 > ഈ ഔദ്യോഗിക ഉറവിടങ്ങളിലെ ഇൻസ്റ്റലേഷൻ, റിലീസ് ലിങ്കുകൾ പിന്തുടരുക. സമാനമായ
 > repository പേരോ പകർത്തിയ README-യോ മാത്രം ഒരു download ഔദ്യോഗികമാണെന്ന് ഉറപ്പാക്കുന്നില്ല.
 
@@ -75,7 +75,7 @@ Linux-ൽ Ghidra, JADX, firmware tool launches, static JavaScript/Electron analy
 Node.js-ഉം npm-ഉം ഇൻസ്റ്റാൾ ചെയ്തശേഷം ഈ command പ്രവർത്തിപ്പിക്കുക:
 
 ```bash
-npx rea-agents setup
+npx build-anything setup
 ```
 
 നിങ്ങൾ ഉപയോഗിക്കുന്ന agents തിരഞ്ഞെടുക്കുക, നിർദ്ദേശിച്ച മാറ്റങ്ങൾ പരിശോധിക്കുക, തുടർന്ന് അവയ്ക്ക് അനുമതി നൽകുക. നിലവിലുള്ള configuration-ന്റെ backup-ുകൾ സൂക്ഷിച്ചുകൊണ്ട് setup, REA-യുടെ MCP server-ഉം അനുയോജ്യമായ workflow നിർദ്ദേശങ്ങളും ചേർക്കും. അതിനുശേഷം നിങ്ങളുടെ agent വീണ്ടും ആരംഭിക്കുക.
@@ -95,7 +95,7 @@ Notes app-ൽ search എങ്ങനെ പ്രവർത്തിക്കു�
 Extract ചെയ്ത JavaScript/Electron app directory അല്ലെങ്കിൽ ASAR പരിശോധിക്കുക:
 
 ```bash
-npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json
+npx -y build-anything@latest analyze-javascript-application /absolute/path/to/app --json
 ```
 
 ഫലത്തിൽ modules, imports, Electron boundaries, അവയ്ക്കുള്ള തെളിവുകൾ എന്നിവ ഉൾപ്പെടും. `/absolute/path/to/app` എന്നതിന് പകരം നിങ്ങളുടെ target-ന്റെ path നൽകുക; Windows-ൽ ഉദാഹരണത്തിന് `"D:/apps/example"` ഉപയോഗിക്കാം.
@@ -103,7 +103,7 @@ npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --
 സാധാരണ ഉപയോഗത്തിനായി `rea` command ഇൻസ്റ്റാൾ ചെയ്യാൻ:
 
 ```bash
-npm install --global rea-agents
+npm install --global build-anything
 rea --help
 ```
 
@@ -126,10 +126,10 @@ Agent registrations-ഉം skill-ഉം പുതുക്കാൻ, update ക�
 `npx` ഉപയോഗിക്കുന്നുവെങ്കിൽ, agent setup പുതുക്കാൻ:
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-Setup-ൽ വരുത്തുന്ന മാറ്റങ്ങൾ പരിശോധിച്ച് നിങ്ങളുടെ agent വീണ്ടും ആരംഭിക്കുക. ഒറ്റത്തവണ മാത്രം ഉപയോഗിക്കുന്ന CLI commands-നായി command-ന് മുമ്പ് `npx rea-agents@latest` ഉപയോഗിക്കുക. Bun ഉപയോഗിക്കുമ്പോൾ `npx rea-agents@latest`-ന് പകരം `bunx rea-agents@latest` ഉപയോഗിക്കുക.
+Setup-ൽ വരുത്തുന്ന മാറ്റങ്ങൾ പരിശോധിച്ച് നിങ്ങളുടെ agent വീണ്ടും ആരംഭിക്കുക. ഒറ്റത്തവണ മാത്രം ഉപയോഗിക്കുന്ന CLI commands-നായി command-ന് മുമ്പ് `npx build-anything@latest` ഉപയോഗിക്കുക. Bun ഉപയോഗിക്കുമ്പോൾ `npx build-anything@latest`-ന് പകരം `bunx build-anything@latest` ഉപയോഗിക്കുക.
 
 ## REA എങ്ങനെ പ്രവർത്തിക്കുന്നു
 
@@ -207,7 +207,7 @@ Renderer-ന്റെ clipboard API കണ്ടെത്തി, അതിനെ
 [Case study വായിക്കുക](https://rea.tools/showcase/th04/) ·
 [പുനർനിർമ്മാണ repository](https://github.com/N0zoM1z0/th04)
 
-REA ഉപയോഗിച്ച് നിങ്ങൾ രസകരമായ എന്തെങ്കിലും പരിശോധിച്ചിട്ടുണ്ടെങ്കിൽ അത് കാണാൻ ഞങ്ങൾ ആഗ്രഹിക്കുന്നു. പരിശോധിച്ച target, നിങ്ങളുടെ ചോദ്യം, REA എങ്ങനെ സഹായിച്ചു, നിങ്ങൾ കണ്ടെത്തിയത് എന്നിവ ഉൾപ്പെടുത്തി [issue](https://github.com/morluto/rea/issues) അല്ലെങ്കിൽ [pull request](https://github.com/morluto/rea/pulls) വഴി നിങ്ങളുടെ case പങ്കിടുക.
+REA ഉപയോഗിച്ച് നിങ്ങൾ രസകരമായ എന്തെങ്കിലും പരിശോധിച്ചിട്ടുണ്ടെങ്കിൽ അത് കാണാൻ ഞങ്ങൾ ആഗ്രഹിക്കുന്നു. പരിശോധിച്ച target, നിങ്ങളുടെ ചോദ്യം, REA എങ്ങനെ സഹായിച്ചു, നിങ്ങൾ കണ്ടെത്തിയത് എന്നിവ ഉൾപ്പെടുത്തി [issue](https://github.com/xueba-gh/build-anything/issues) അല്ലെങ്കിൽ [pull request](https://github.com/xueba-gh/build-anything/pulls) വഴി നിങ്ങളുടെ case പങ്കിടുക.
 
 ## പതിവുചോദ്യങ്ങൾ
 
@@ -235,7 +235,7 @@ Local MCP servers പിന്തുണയ്ക്കുന്ന ഏത് age
 <details>
 <summary><strong>skills.sh-ൽ നിന്ന് skill ഇൻസ്റ്റാൾ ചെയ്യുന്നത് എന്താണ് ചെയ്യുന്നത്?</strong></summary>
 
-ഈ skill നിങ്ങളുടെ agent-ന് അന്വേഷണ നിർദ്ദേശങ്ങൾ നൽകുന്നു. REA-യുടെ MCP server രജിസ്റ്റർ ചെയ്യാനും അനുയോജ്യമായ നിർദ്ദേശങ്ങൾ ഇൻസ്റ്റാൾ ചെയ്യാനും `npx rea-agents setup` ഉപയോഗിക്കുക; തുടർന്ന് നിങ്ങളുടെ agent വീണ്ടും ആരംഭിക്കുക. [Skill-only installation](../installation.md#skill-only-installation) കാണുക.
+ഈ skill നിങ്ങളുടെ agent-ന് അന്വേഷണ നിർദ്ദേശങ്ങൾ നൽകുന്നു. REA-യുടെ MCP server രജിസ്റ്റർ ചെയ്യാനും അനുയോജ്യമായ നിർദ്ദേശങ്ങൾ ഇൻസ്റ്റാൾ ചെയ്യാനും `npx build-anything setup` ഉപയോഗിക്കുക; തുടർന്ന് നിങ്ങളുടെ agent വീണ്ടും ആരംഭിക്കുക. [Skill-only installation](../installation.md#skill-only-installation) കാണുക.
 
 </details>
 
@@ -267,10 +267,10 @@ rea update
 `npx` വഴി agent setup നടത്തുന്നതിനായി:
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-നിങ്ങൾ agent ഉപയോഗിക്കുന്നുണ്ടെങ്കിൽ, [setup പുതുക്കൽ](#update-rea) പൂർത്തിയാക്കി അത് വീണ്ടും ആരംഭിക്കുക. അതേ task വീണ്ടും ശ്രമിക്കുക. പ്രശ്നം തുടരുകയാണെങ്കിൽ, നിങ്ങളുടെ REA version, target type, പ്രശ്നം ആവർത്തിക്കാൻ ആവശ്യമായ ഘട്ടങ്ങൾ, error output എന്നിവ ഉൾപ്പെടുത്തി [issue തുറക്കുക](https://github.com/morluto/rea/issues).
+നിങ്ങൾ agent ഉപയോഗിക്കുന്നുണ്ടെങ്കിൽ, [setup പുതുക്കൽ](#update-rea) പൂർത്തിയാക്കി അത് വീണ്ടും ആരംഭിക്കുക. അതേ task വീണ്ടും ശ്രമിക്കുക. പ്രശ്നം തുടരുകയാണെങ്കിൽ, നിങ്ങളുടെ REA version, target type, പ്രശ്നം ആവർത്തിക്കാൻ ആവശ്യമായ ഘട്ടങ്ങൾ, error output എന്നിവ ഉൾപ്പെടുത്തി [issue തുറക്കുക](https://github.com/xueba-gh/build-anything/issues).
 
 </details>
 
@@ -296,9 +296,9 @@ REA ഉപയോഗിക്കുന്നവർക്കും, bugs റിപ
 
 <a href="https://www.star-history.com/?repos=morluto%2Frea&amp;type=date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date&amp;theme=dark&amp;legend=top-left" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
-    <img alt="REA GitHub star ചരിത്രം" src="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date&amp;theme=dark&amp;legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
+    <img alt="REA GitHub star ചരിത്രം" src="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
   </picture>
 </a>
 
@@ -312,7 +312,7 @@ REA ഉപയോഗിക്കുന്നവർക്കും, bugs റിപ
 
 ## സംഭാവനകൾ
 
-REA-യ്ക്കായി നിങ്ങളുടെ സഹായം ഞങ്ങൾ സ്വാഗതം ചെയ്യുന്നു! bug റിപ്പോർട്ട് ചെയ്യാനോ feature നിർദ്ദേശിക്കാനോ [issue തുറക്കുക](https://github.com/morluto/rea/issues), code അല്ലെങ്കിൽ docs മെച്ചപ്പെടുത്താൻ [pull request അയയ്ക്കുക](https://github.com/morluto/rea/pulls).
+REA-യ്ക്കായി നിങ്ങളുടെ സഹായം ഞങ്ങൾ സ്വാഗതം ചെയ്യുന്നു! bug റിപ്പോർട്ട് ചെയ്യാനോ feature നിർദ്ദേശിക്കാനോ [issue തുറക്കുക](https://github.com/xueba-gh/build-anything/issues), code അല്ലെങ്കിൽ docs മെച്ചപ്പെടുത്താൻ [pull request അയയ്ക്കുക](https://github.com/xueba-gh/build-anything/pulls).
 
 Development setup-നും checks-നും [CONTRIBUTING.md](../../CONTRIBUTING.md), verification lanes-നായി [testing](../testing.md), project ഘടനയ്ക്കായി [architecture map](../architecture.mermaid) എന്നിവ കാണുക.
 

@@ -83,7 +83,7 @@ attach a page session. REA cannot read the other client's complete
 user-agent/client-hint configuration and does not replay guessed settings.
 Use a disposable browser when preserving externally configured emulation is
 required, or have the owning client reapply its complete configuration afterward.
-See [the reproduction and Chromium ownership limitation](https://github.com/morluto/rea/issues/4089).
+See [the reproduction and Chromium ownership limitation](https://github.com/xueba-gh/build-anything/issues/4089).
 
 Existing static application Evidence and passive web/Electron captures can be
 combined later through
@@ -127,7 +127,7 @@ On Linux, a reachable but locked desktop keyring can stall Chrome before its
 first navigation. For a dedicated investigation profile, add
 `--password-store=basic` to bypass that keyring. Empty or placeholder frame URLs
 then describe an unloaded page; REA continues to require an allowed, committed
-URL. See [the startup investigation](https://github.com/morluto/rea/issues/1384#issuecomment-6093781686).
+URL. See [the startup investigation](https://github.com/xueba-gh/build-anything/issues/1384#issuecomment-6093781686).
 
 ### Browsers without HTTP discovery
 

@@ -1,7 +1,7 @@
 # JEB Linux CE native workflow checkpoint
 
 This checkpoint qualifies Linux CE setup and selected native reads for
-[#4996](https://github.com/morluto/rea/issues/4996). It changes documentation;
+[#4996](https://github.com/xueba-gh/build-anything/issues/4996). It changes documentation;
 it does not introduce a provider cache or claim a before/after speedup.
 The existing shared CLI/MCP implementation returned consistent facts and
 Evidence, with one metadata request per persistent MCP task. Further wrapper
@@ -145,7 +145,7 @@ queries. Actual model usage, prompts, protocol/initialization framing, client
 filtering/rendering/replay, shell framing and context for independent oracles
 were not measured. No model-token savings or complex-investigation advantage
 is established. Catalog delivery is a shared concern; existing
-[PR #3026](https://github.com/morluto/rea/pull/3026) already explores family
+[PR #3026](https://github.com/xueba-gh/build-anything/pull/3026) already explores family
 selection and is outside this checkpoint.
 
 ## Preserved attempts and verification limits
@@ -167,7 +167,7 @@ The JSON receipt retains costs and outcomes for all earlier attempts:
 This audit does not qualify CE Java/Android decompilation, GUI project opening,
 Windows/macOS, more than 100 units, real caller cancellation, or recovery after
 engine restart. Existing reconnect/invalidation work is
-[PR #3754](https://github.com/morluto/rea/pull/3754). The selected function and
+[PR #3754](https://github.com/xueba-gh/build-anything/pull/3754). The selected function and
 constant checks do not establish broader software-analysis effectiveness.
 
 ## Release 6.7.0 integration control

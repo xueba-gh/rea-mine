@@ -1,6 +1,6 @@
 # Hopper literal search: reuse decoded records
 
-For [#5010](https://github.com/morluto/rea/issues/5010), the bridge now keeps
+For [#5010](https://github.com/xueba-gh/build-anything/issues/5010), the bridge now keeps
 the existing decoded records in its sorted search inventory and projects only
 matches. Previously, every positive literal search called `_string_inventory`
 again, sorting all native object addresses and building another complete map
@@ -199,7 +199,7 @@ The receipt preserves setup, diagnostic, failed and completed costs separately:
 - Two unchanged-baseline launches timed out at bridge startup. An owned-display
   observation showed completed native analysis but a Python bootstrap failure.
   Adding only the missing embedded Python library made the baseline pass;
-  [#5015](https://github.com/morluto/rea/issues/5015) records the separate
+  [#5015](https://github.com/xueba-gh/build-anything/issues/5015) records the separate
   installer dependency hypothesis and its unverified actual-installer scope.
 - C2 stopped after 82.607 seconds when host available memory crossed the
   unchanged stop threshold. Its sampled family peak was 1,517,019,136 bytes

@@ -30,8 +30,8 @@ NAVIGATION = (
 
 def checked_contributors(data):
     """Validate the public snapshot once, before rendering or replacing it."""
-    if not isinstance(data, dict) or data.get("repository") != "morluto/rea":
-        raise ValueError("Contributors must come from morluto/rea")
+    if not isinstance(data, dict) or data.get("repository") != "xueba-gh/build-anything":
+        raise ValueError("Contributors must come from xueba-gh/build-anything")
     if not isinstance(data.get("updated"), str):
         raise ValueError("Contributors need an ISO update date")
     date.fromisoformat(data["updated"])
@@ -85,7 +85,7 @@ def contributor_block(root):
 def refresh_contributors(root):
     """Validate every GitHub page, then atomically replace the offline snapshot."""
     result = subprocess.run(
-        ["gh", "api", "--paginate", "repos/morluto/rea/contributors?per_page=100", "--jq",
+        ["gh", "api", "--paginate", "repos/xueba-gh/build-anything/contributors?per_page=100", "--jq",
          "[.[] | {login,id,type,avatar_url,html_url}]"],
         capture_output=True, text=True, check=True,
     )
@@ -97,7 +97,7 @@ def refresh_contributors(root):
         people.extend(page)
         remaining = remaining[end:].lstrip()
     data = checked_contributors({
-        "repository": "morluto/rea", "updated": date.today().isoformat(), "contributors": people,
+        "repository": "xueba-gh/build-anything", "updated": date.today().isoformat(), "contributors": people,
     })
     path = root / "website/public/contributors/people.json"
     with tempfile.TemporaryDirectory(dir=path.parent, prefix=f".{path.name}-") as directory:

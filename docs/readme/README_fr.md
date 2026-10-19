@@ -9,10 +9,10 @@
 
 **Repérez une fonctionnalité qui vous plaît. Comprenez son fonctionnement, jusqu'au niveau du binaire.**
 
-[![npm version](https://img.shields.io/npm/v/rea-agents?style=flat-square&color=cb3837)](https://www.npmjs.com/package/rea-agents)
+[![npm version](https://img.shields.io/npm/v/build-anything?style=flat-square&color=cb3837)](https://www.npmjs.com/package/build-anything)
 [![MCP tool catalog](https://img.shields.io/badge/MCP-tool_catalog-5c4ee5?style=flat-square)](../mcp-contracts.md#generated-catalog)
 [![Node.js requirements](https://img.shields.io/badge/Node.js-requirements-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#current-status)
-[![skills.sh](https://skills.sh/b/morluto/rea?style=flat-square)](https://skills.sh/morluto/rea/reverse-engineer-anything)
+[![skills.sh](https://skills.sh/b/xueba-gh/build-anything?style=flat-square)](https://skills.sh/xueba-gh/build-anything/reverse-engineer-anything)
 [![MIT license](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](../../LICENSE)
 [![Discord](https://img.shields.io/discord/1556595354999332884?logo=discord&logoColor=white&label=Discord&color=5865F2)](https://discord.gg/GkcryMnJDM)
 
@@ -22,12 +22,12 @@
 
 [Démarrage rapide](#démarrage-rapide) · [Comment fonctionne REA](#comment-fonctionne-rea) · [Ce que vous pouvez analyser](#ce-que-vous-pouvez-analyser) · [Études de cas](#études-de-cas) · [Questions fréquentes](#questions-fréquentes) · [Outils GNU objdump et Rizin](../reverse-engineering-tools.md) · [Documentation](#documentation)
 
-<code>npx rea-agents setup</code>
+<code>npx build-anything setup</code>
 
 </div>
 
 > [!IMPORTANT]
-> Sources officielles de REA : [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
+> Sources officielles de REA : [xueba-gh/build-anything](https://github.com/xueba-gh/build-anything), [rea.tools](https://rea.tools/), [build-anything](https://www.npmjs.com/package/build-anything) (npm).
 > Utilisez les liens d’installation et de publication de ces sources officielles. Un nom de dépôt similaire ou un README copié ne prouve pas qu’un téléchargement est officiel.
 
 <div align="center">
@@ -71,7 +71,7 @@ Setup enregistre REA auprès de votre agent et installe les instructions de work
 Une fois Node.js et npm installés, exécutez :
 
 ```bash
-npx rea-agents setup
+npx build-anything setup
 ```
 
 Choisissez vos agents, vérifiez les modifications proposées et approuvez-les. Setup ajoute le serveur MCP de REA et les instructions de workflow correspondantes, et sauvegarde la configuration existante. Redémarrez ensuite votre agent.
@@ -92,7 +92,7 @@ Remplacez Notes par votre application cible et la fonctionnalité que vous voule
 Inspectez le répertoire extrait ou l'archive ASAR d'une application JavaScript/Electron :
 
 ```bash
-npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json
+npx -y build-anything@latest analyze-javascript-application /absolute/path/to/app --json
 ```
 
 Le résultat comprend les modules, les imports, les frontières Electron et les preuves associées. Remplacez le chemin par votre cible, par exemple `"D:/apps/example"` sous Windows.
@@ -100,7 +100,7 @@ Le résultat comprend les modules, les imports, les frontières Electron et les 
 Pour installer la commande `rea` pour un usage régulier :
 
 ```bash
-npm install --global rea-agents
+npm install --global build-anything
 rea --help
 ```
 
@@ -123,10 +123,10 @@ Pour actualiser les enregistrements de vos agents et le skill, exécutez la comm
 Si vous utilisez `npx`, mettez à jour la configuration de votre agent avec :
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-Vérifiez les modifications proposées par Setup et redémarrez votre agent. Pour des commandes CLI ponctuelles, utilisez `npx rea-agents@latest` suivi de la commande. Avec Bun, utilisez `bunx rea-agents@latest` à la place de `npx rea-agents@latest`.
+Vérifiez les modifications proposées par Setup et redémarrez votre agent. Pour des commandes CLI ponctuelles, utilisez `npx build-anything@latest` suivi de la commande. Avec Bun, utilisez `bunx build-anything@latest` à la place de `npx build-anything@latest`.
 
 ## Comment fonctionne REA
 
@@ -194,7 +194,7 @@ Inspectez les instructions 16 bits du jeu PC-98 d'origine, retrouvez les calculs
 
 [Lire l'étude de cas](https://rea.tools/fr/showcase/th04/) · [Dépôt de la reconstruction](https://github.com/N0zoM1z0/th04)
 
-Si vous avez utilisé REA sur un projet intéressant, nous serions ravis de le découvrir. Partagez votre cas dans une [issue](https://github.com/morluto/rea/issues) ou une [pull request](https://github.com/morluto/rea/pulls), en précisant la cible, votre question, la manière dont REA vous a aidé et ce que vous avez découvert.
+Si vous avez utilisé REA sur un projet intéressant, nous serions ravis de le découvrir. Partagez votre cas dans une [issue](https://github.com/xueba-gh/build-anything/issues) ou une [pull request](https://github.com/xueba-gh/build-anything/pulls), en précisant la cible, votre question, la manière dont REA vous a aidé et ce que vous avez découvert.
 
 ## Questions fréquentes
 
@@ -222,7 +222,7 @@ REA lance Hopper lorsqu'une opération en a besoin. Sous macOS, une boîte de di
 <details>
 <summary><strong>Que fait l'installation du skill depuis skills.sh ?</strong></summary>
 
-Le skill fournit des instructions d'investigation à votre agent. Utilisez `npx rea-agents setup` pour enregistrer le serveur MCP de REA et installer les instructions correspondantes, puis redémarrez votre agent. Consultez [l'installation du skill seul](../installation.md#skill-only-installation).
+Le skill fournit des instructions d'investigation à votre agent. Utilisez `npx build-anything setup` pour enregistrer le serveur MCP de REA et installer les instructions correspondantes, puis redémarrez votre agent. Consultez [l'installation du skill seul](../installation.md#skill-only-installation).
 
 </details>
 
@@ -254,10 +254,10 @@ rea update
 Pour une configuration d'agent via `npx` :
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-Si vous utilisez un agent, terminez l'[actualisation de la configuration](#mettre-à-jour-rea) et redémarrez-le. Relancez la même tâche. Si le problème persiste, [ouvrez une issue](https://github.com/morluto/rea/issues) en indiquant votre version de REA, le type de cible, les étapes pour reproduire le problème et la sortie d'erreur.
+Si vous utilisez un agent, terminez l'[actualisation de la configuration](#mettre-à-jour-rea) et redémarrez-le. Relancez la même tâche. Si le problème persiste, [ouvrez une issue](https://github.com/xueba-gh/build-anything/issues) en indiquant votre version de REA, le type de cible, les étapes pour reproduire le problème et la sortie d'erreur.
 
 </details>
 
@@ -282,9 +282,9 @@ Merci à toutes les personnes qui utilisent REA, signalent des bugs, proposent d
 
 <a href="https://www.star-history.com/?repos=morluto%2Frea&amp;type=date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date&amp;theme=dark&amp;legend=top-left" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
-    <img alt="Historique des étoiles GitHub de REA" src="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date&amp;theme=dark&amp;legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
+    <img alt="Historique des étoiles GitHub de REA" src="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
   </picture>
 </a>
 
@@ -300,7 +300,7 @@ applicable licenses.
 
 ## Contribuer
 
-Votre aide sur REA est la bienvenue ! [Ouvrez une issue](https://github.com/morluto/rea/issues) pour signaler un bug ou proposer une fonctionnalité, ou [envoyez une pull request](https://github.com/morluto/rea/pulls) pour améliorer le code ou la documentation.
+Votre aide sur REA est la bienvenue ! [Ouvrez une issue](https://github.com/xueba-gh/build-anything/issues) pour signaler un bug ou proposer une fonctionnalité, ou [envoyez une pull request](https://github.com/xueba-gh/build-anything/pulls) pour améliorer le code ou la documentation.
 
 Consultez [CONTRIBUTING.md](../../CONTRIBUTING.md) pour l'environnement de développement et les vérifications, la page [tests](../testing.md) pour les procédures de vérification, et la [carte de l'architecture](../architecture.mermaid) pour la structure du projet.
 

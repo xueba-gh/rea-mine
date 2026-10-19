@@ -310,11 +310,11 @@ does not check those calls; run their orchestration tests against the built
 modules, including the verifier's failure and cleanup paths.
 
 Representative regressions include
-[process cleanup-time SIGINT](https://github.com/morluto/rea/blob/e78455338fe2d06c4cd03d59cbf33473d754998b/tests/boundary/process/processCaptureCancellationAdapters.test.ts),
-[late authenticated cleanup](https://github.com/morluto/rea/blob/e78455338fe2d06c4cd03d59cbf33473d754998b/tests/boundary/providers/hopper/hopperClient.handshakeRecovery.test.ts),
-[LLDB launch and finalization](https://github.com/morluto/rea/blob/e78455338fe2d06c4cd03d59cbf33473d754998b/tests/boundary/providers/native/lldbCallTracerFailures.test.ts),
-[composed child ownership](https://github.com/morluto/rea/blob/e78455338fe2d06c4cd03d59cbf33473d754998b/src/application/binary/CompositeProvider.test.ts),
-and [public CLI cleanup denial](https://github.com/morluto/rea/blob/e78455338fe2d06c4cd03d59cbf33473d754998b/tests/boundary/cli/wasmCleanupCli.test.ts).
+[process cleanup-time SIGINT](https://github.com/xueba-gh/build-anything/blob/e78455338fe2d06c4cd03d59cbf33473d754998b/tests/boundary/process/processCaptureCancellationAdapters.test.ts),
+[late authenticated cleanup](https://github.com/xueba-gh/build-anything/blob/e78455338fe2d06c4cd03d59cbf33473d754998b/tests/boundary/providers/hopper/hopperClient.handshakeRecovery.test.ts),
+[LLDB launch and finalization](https://github.com/xueba-gh/build-anything/blob/e78455338fe2d06c4cd03d59cbf33473d754998b/tests/boundary/providers/native/lldbCallTracerFailures.test.ts),
+[composed child ownership](https://github.com/xueba-gh/build-anything/blob/e78455338fe2d06c4cd03d59cbf33473d754998b/src/application/binary/CompositeProvider.test.ts),
+and [public CLI cleanup denial](https://github.com/xueba-gh/build-anything/blob/e78455338fe2d06c4cd03d59cbf33473d754998b/tests/boundary/cli/wasmCleanupCli.test.ts).
 These controlled probes do not replace the matching real-provider lane. Record
 the base failure, passing control, exact host/provider, verified cleanup, and
 unavailable coverage; a missing engine is not a pass.
@@ -711,7 +711,7 @@ It also invokes the actual bridge methods on detached Ghidra model objects to
 check ambiguous dispatches, signed literals, precision bounds, shared targets,
 and conflicting labels. This reflection fixture depends on the pinned Ghidra
 model and does not claim a compiler produced those synthetic graph shapes.
-Pass `--entrypoint /path/to/installed/rea-agents/scripts/rea.mjs` directly to
+Pass `--entrypoint /path/to/installed/build-anything/scripts/rea.mjs` directly to
 `scripts/verify-real-ghidra-switch.mjs` to verify an installed package through
 the same compiler oracles and CLI/MCP checks.
 
@@ -954,7 +954,7 @@ other engine versions and architectures remain unverified; see the
 
 Native IDA MCP verification uses `"protocol": "native"` with an already-running native plugin and requires `--second-procedure other_function --second-marker unique_second_body_text` to exercise GUI function switching and a return to the first function. These options remain optional for other profiles. The literal marker must appear in the second function's pseudocode and be absent from the first. Native cloud/widget failures are reported without hidden retries.
 
-The initial Linux x64 IDA Free 9.4 run used native MCP 1.1.2 with a local navigation correction. Windows x64 verification uses **IDA Pro 9.3**, the two-function public fixture, and the shipped Windows `whoami.exe` application. The native plugin was built from upstream `c9d15d98e8a143fc74f6e14037c48f63889b6d6c`, including the merged navigation fix, with a local loopback-listener change. Production CLI/MCP parity, switching, identity and cleanup passed. Correctness and performance measurements are recorded in the [Windows native verification notes](https://github.com/morluto/rea/blob/main/experiments/analysis-efficiency/ida-native-windows.md). Stock 1.1.2 switching, native macOS, and Windows IDA Free remain unverified. See the [native bridge prerequisites](ida-provider.md#optional-native-ida-mcp-bridge).
+The initial Linux x64 IDA Free 9.4 run used native MCP 1.1.2 with a local navigation correction. Windows x64 verification uses **IDA Pro 9.3**, the two-function public fixture, and the shipped Windows `whoami.exe` application. The native plugin was built from upstream `c9d15d98e8a143fc74f6e14037c48f63889b6d6c`, including the merged navigation fix, with a local loopback-listener change. Production CLI/MCP parity, switching, identity and cleanup passed. Correctness and performance measurements are recorded in the [Windows native verification notes](https://github.com/xueba-gh/build-anything/blob/main/experiments/analysis-efficiency/ida-native-windows.md). Stock 1.1.2 switching, native macOS, and Windows IDA Free remain unverified. See the [native bridge prerequisites](ida-provider.md#optional-native-ida-mcp-bridge).
 
 ## Kuna lane
 
@@ -984,7 +984,7 @@ arm64. It covered zlib 1.3.2 `minigzip`, coreutils 9.9 `sort` and the sqlite
 3.54.0 shell, built at `-O2` for ELF x86-64, ELF AArch64, Mach-O arm64 and
 Mach-O x86-64, each with symbols and stripped. A separate Linux x86-64 run verified
 the fixture and system zlib 1.2.13 / SQLite 3.40.1 libraries through MCP, including
-cached byte spans and a Ghidra comparison. See the [Linux report](https://github.com/morluto/rea/pull/3854#issuecomment-6185870391)
+cached byte spans and a Ghidra comparison. See the [Linux report](https://github.com/xueba-gh/build-anything/pull/3854#issuecomment-6185870391)
 for measured scope and limitations. Windows, PE and universal Mach-O remain
 unverified by this lane.
 

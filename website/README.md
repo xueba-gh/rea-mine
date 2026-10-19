@@ -598,14 +598,14 @@ Cloudflare's Wrangler action.
 The equivalent CLI command publishes both hosts:
 
 ```sh
-gh workflow run website-pages.yml --repo morluto/rea --ref main
+gh workflow run website-pages.yml --repo xueba-gh/build-anything --ref main
 ```
 
 While Cloudflare credentials are being configured, an explicitly requested
 Pages-only publication uses the same workflow with `target=pages`:
 
 ```sh
-gh workflow run website-pages.yml --repo morluto/rea --ref main -f target=pages
+gh workflow run website-pages.yml --repo xueba-gh/build-anything --ref main -f target=pages
 ```
 
 This mode verifies the Pages commit marker. The default remains `both` for

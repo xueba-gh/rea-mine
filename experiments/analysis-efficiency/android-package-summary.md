@@ -1,7 +1,7 @@
 # Android package summary and exact retained manifest
 
-Continues [#2016](https://github.com/morluto/rea/issues/2016) and
-[#2438](https://github.com/morluto/rea/pull/2438). The recurring NewPipe question
+Continues [#2016](https://github.com/xueba-gh/build-anything/issues/2016) and
+[#2438](https://github.com/xueba-gh/build-anything/pull/2438). The recurring NewPipe question
 asks for APK/package/version identity, all case-sensitive MainActivity matches
 and all reported onCreate entries, including explicit null DEX descriptors.
 Complete package replies delivered decoded manifest text and duplicate upstream

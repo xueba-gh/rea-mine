@@ -9,10 +9,10 @@
 
 **Vedi una funzionalità che ti piace. Capisci come funziona, fino al livello binario.**
 
-[![npm version](https://img.shields.io/npm/v/rea-agents?style=flat-square&color=cb3837)](https://www.npmjs.com/package/rea-agents)
+[![npm version](https://img.shields.io/npm/v/build-anything?style=flat-square&color=cb3837)](https://www.npmjs.com/package/build-anything)
 [![MCP tool catalog](https://img.shields.io/badge/MCP-tool_catalog-5c4ee5?style=flat-square)](../mcp-contracts.md#generated-catalog)
 [![Node.js requirements](https://img.shields.io/badge/Node.js-requirements-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#cosa-puoi-analizzare)
-[![skills.sh](https://skills.sh/b/morluto/rea?style=flat-square)](https://skills.sh/morluto/rea/reverse-engineer-anything)
+[![skills.sh](https://skills.sh/b/xueba-gh/build-anything?style=flat-square)](https://skills.sh/xueba-gh/build-anything/reverse-engineer-anything)
 [![MIT license](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](../../LICENSE)
 [![Discord](https://img.shields.io/discord/1556595354999332884?logo=discord&logoColor=white&label=Discord&color=5865F2)](https://discord.gg/GkcryMnJDM)
 
@@ -22,12 +22,12 @@
 
 [Avvio rapido](#avvio-rapido) · [Come funziona REA](#come-funziona-rea) · [Cosa puoi analizzare](#cosa-puoi-analizzare) · [Showcase](#showcase) · [FAQ](#faq) · [Strumenti GNU objdump e Rizin](../reverse-engineering-tools.md) · [Documentazione](#documentazione)
 
-<code>npx rea-agents setup</code>
+<code>npx build-anything setup</code>
 
 </div>
 
 > [!IMPORTANT]
-> Fonti ufficiali di REA: [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
+> Fonti ufficiali di REA: [xueba-gh/build-anything](https://github.com/xueba-gh/build-anything), [rea.tools](https://rea.tools/), [build-anything](https://www.npmjs.com/package/build-anything) (npm).
 > Segui i link di installazione e delle versioni pubblicate da queste fonti ufficiali. Un nome di repository simile o un README copiato non dimostra che un download sia ufficiale.
 
 <div align="center">
@@ -71,7 +71,7 @@ La configurazione registra REA con il tuo agente e installa le istruzioni di wor
 Con Node.js e npm installati, esegui:
 
 ```bash
-npx rea-agents setup
+npx build-anything setup
 ```
 
 Scegli i tuoi agenti, rivedi le modifiche proposte e approvale. La configurazione aggiunge il server MCP di REA e le istruzioni di workflow corrispondenti, con backup della configurazione esistente. Riavvia quindi il tuo agente.
@@ -92,7 +92,7 @@ Sostituisci Note con la tua app di destinazione e la funzionalità che vuoi capi
 Ispeziona una directory di app JavaScript/Electron estratta o un ASAR:
 
 ```bash
-npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json
+npx -y build-anything@latest analyze-javascript-application /absolute/path/to/app --json
 ```
 
 Il risultato include moduli, import, confini Electron e le relative prove. Sostituisci il percorso con il tuo bersaglio, ad esempio `"D:/apps/example"` su Windows.
@@ -100,7 +100,7 @@ Il risultato include moduli, import, confini Electron e le relative prove. Sosti
 Per installare il comando `rea` per un uso regolare:
 
 ```bash
-npm install --global rea-agents
+npm install --global build-anything
 rea --help
 ```
 
@@ -123,10 +123,10 @@ Per aggiornare le registrazioni del tuo agente e lo skill, esegui il comando di 
 Se usi `npx`, aggiorna la configurazione del tuo agente con:
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-Rivedi le modifiche di configurazione e riavvia il tuo agente. Per comandi CLI singoli, usa `npx rea-agents@latest` seguito dal comando. Con Bun, usa `bunx rea-agents@latest` al posto di `npx rea-agents@latest`.
+Rivedi le modifiche di configurazione e riavvia il tuo agente. Per comandi CLI singoli, usa `npx build-anything@latest` seguito dal comando. Con Bun, usa `bunx build-anything@latest` al posto di `npx build-anything@latest`.
 
 ## Come funziona REA
 
@@ -194,7 +194,7 @@ Ispeziona le istruzioni a 16 bit del gioco PC-98 originale, recupera i calcoli d
 
 [Leggi il case study](https://rea.tools/it/showcase/th04/) · [Repository di ricostruzione](https://github.com/N0zoM1z0/th04)
 
-Se hai usato REA su qualcosa di interessante, ci piacerebbe vederlo. Condividi il tuo caso in una [issue](https://github.com/morluto/rea/issues) o in una [pull request](https://github.com/morluto/rea/pulls), includendo il bersaglio, la tua domanda, come REA ti ha aiutato e cosa hai scoperto.
+Se hai usato REA su qualcosa di interessante, ci piacerebbe vederlo. Condividi il tuo caso in una [issue](https://github.com/xueba-gh/build-anything/issues) o in una [pull request](https://github.com/xueba-gh/build-anything/pulls), includendo il bersaglio, la tua domanda, come REA ti ha aiutato e cosa hai scoperto.
 
 ## FAQ
 
@@ -222,7 +222,7 @@ REA avvia Hopper quando un'operazione ne ha bisogno. Su macOS, una finestra di d
 <details>
 <summary><strong>Cosa fa l'installazione dello skill da skills.sh?</strong></summary>
 
-Lo skill fornisce istruzioni di indagine per il tuo agente. Usa `npx rea-agents setup` per registrare il server MCP di REA e installare le istruzioni corrispondenti, quindi riavvia il tuo agente. Vedi [installazione solo skill](../installation.md#skill-only-installation).
+Lo skill fornisce istruzioni di indagine per il tuo agente. Usa `npx build-anything setup` per registrare il server MCP di REA e installare le istruzioni corrispondenti, quindi riavvia il tuo agente. Vedi [installazione solo skill](../installation.md#skill-only-installation).
 
 </details>
 
@@ -254,10 +254,10 @@ rea update
 Per la configurazione dell'agente tramite `npx`:
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-Se stai usando un agente, completa l'[aggiornamento della configurazione](#aggiorna-rea) e riavvialo. Riprova lo stesso task. Se il problema persiste, [apri un issue](https://github.com/morluto/rea/issues) con la tua versione di REA, il tipo di bersaglio, i passaggi per riprodurlo e l'output di errore.
+Se stai usando un agente, completa l'[aggiornamento della configurazione](#aggiorna-rea) e riavvialo. Riprova lo stesso task. Se il problema persiste, [apri un issue](https://github.com/xueba-gh/build-anything/issues) con la tua versione di REA, il tipo di bersaglio, i passaggi per riprodurlo e l'output di errore.
 
 </details>
 
@@ -282,9 +282,9 @@ Grazie a tutti coloro che usano REA, segnalano bug, propongono funzionalità, te
 
 <a href="https://www.star-history.com/?repos=morluto%2Frea&amp;type=date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date&amp;theme=dark&amp;legend=top-left" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
-    <img alt="Cronologia stelle GitHub di REA" src="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date&amp;theme=dark&amp;legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
+    <img alt="Cronologia stelle GitHub di REA" src="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
   </picture>
 </a>
 
@@ -300,7 +300,7 @@ applicable licenses.
 
 ## Contributing
 
-Apprezzeremmo il tuo aiuto con REA! [Apri un issue](https://github.com/morluto/rea/issues) per segnalare un bug o suggerire una funzionalità, oppure [invia una pull request](https://github.com/morluto/rea/pulls) per migliorare il codice o la documentazione.
+Apprezzeremmo il tuo aiuto con REA! [Apri un issue](https://github.com/xueba-gh/build-anything/issues) per segnalare un bug o suggerire una funzionalità, oppure [invia una pull request](https://github.com/xueba-gh/build-anything/pulls) per migliorare il codice o la documentazione.
 
 Vedi [CONTRIBUTING.md](../../CONTRIBUTING.md) per la configurazione di sviluppo e i controlli, [testing](../testing.md) per le lane di verifica e la [mappa dell'architettura](../architecture.mermaid) per la struttura del progetto.
 

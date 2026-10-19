@@ -8,10 +8,10 @@
 
 **Βρήκες μια λειτουργία που σου αρέσει; Μάθε πώς λειτουργεί, μέχρι το επίπεδο του δυαδικού κώδικα.**
 
-[![Έκδοση npm](https://img.shields.io/npm/v/rea-agents?style=flat-square&color=cb3837)](https://www.npmjs.com/package/rea-agents)
+[![Έκδοση npm](https://img.shields.io/npm/v/build-anything?style=flat-square&color=cb3837)](https://www.npmjs.com/package/build-anything)
 [![Κατάλογος εργαλείων MCP](https://img.shields.io/badge/MCP-tool_catalog-5c4ee5?style=flat-square)](../mcp-contracts.md#generated-catalog)
 [![Απαιτήσεις Node.js](https://img.shields.io/badge/Node.js-requirements-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#τι-μπορείς-να-αναλύσεις)
-[![skills.sh](https://skills.sh/b/morluto/rea?style=flat-square)](https://skills.sh/morluto/rea/reverse-engineer-anything)
+[![skills.sh](https://skills.sh/b/xueba-gh/build-anything?style=flat-square)](https://skills.sh/xueba-gh/build-anything/reverse-engineer-anything)
 [![Άδεια MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](../../LICENSE)
 [![Discord](https://img.shields.io/discord/1556595354999332884?logo=discord&logoColor=white&label=Discord&color=5865F2)](https://discord.gg/GkcryMnJDM)
 
@@ -21,13 +21,13 @@
 
 [Γρήγορη εκκίνηση](#γρήγορη-εκκίνηση) · [Πώς λειτουργεί το REA](#πώς-λειτουργεί-το-rea) · [Τι μπορείς να αναλύσεις](#τι-μπορείς-να-αναλύσεις) · [Μελέτες περίπτωσης](#μελέτες-περίπτωσης) · [Συχνές ερωτήσεις](#συχνές-ερωτήσεις) · [Τεκμηρίωση](#τεκμηρίωση)
 
-<code>npx rea-agents setup</code>
+<code>npx build-anything setup</code>
 
 </div>
 
 > [!IMPORTANT]
-> Κατέβασε το REA από το [morluto/rea](https://github.com/morluto/rea),
-> το [rea.tools](https://rea.tools/) ή το [πακέτο rea-agents στο npm](https://www.npmjs.com/package/rea-agents).
+> Κατέβασε το REA από το [xueba-gh/build-anything](https://github.com/xueba-gh/build-anything),
+> το [rea.tools](https://rea.tools/) ή το [πακέτο build-anything στο npm](https://www.npmjs.com/package/build-anything).
 > Ακολούθησε τους συνδέσμους εγκατάστασης και εκδόσεων από αυτές τις επίσημες πηγές.
 > Ένα παρόμοιο όνομα αποθετηρίου ή ένα αντιγραμμένο README δεν αποδεικνύει ότι
 > ένα αρχείο προς λήψη προέρχεται από επίσημη πηγή.
@@ -73,7 +73,7 @@
 Αφού εγκαταστήσεις το Node.js και το npm, εκτέλεσε:
 
 ```bash
-npx rea-agents setup
+npx build-anything setup
 ```
 
 Επίλεξε τους agents σου, έλεγξε τις προτεινόμενες αλλαγές και ενέκρινέ τες. Η διαδικασία προσθέτει τον MCP server του REA και τις αντίστοιχες οδηγίες εργασίας, κρατώντας αντίγραφα ασφαλείας των υφιστάμενων ρυθμίσεων. Στη συνέχεια, επανεκκίνησε τον agent σου.
@@ -93,7 +93,7 @@ npx rea-agents setup
 Εξέτασε τον αποσυμπιεσμένο φάκελο μιας εφαρμογής JavaScript/Electron ή ένα αρχείο ASAR:
 
 ```bash
-npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json
+npx -y build-anything@latest analyze-javascript-application /absolute/path/to/app --json
 ```
 
 Το αποτέλεσμα περιλαμβάνει modules, εισαγωγές, τα όρια μεταξύ των μερών της εφαρμογής Electron και τα αντίστοιχα τεκμήρια. Αντικατάστησε τη διαδρομή με τη δική σου, για παράδειγμα `"D:/apps/example"` στα Windows.
@@ -101,7 +101,7 @@ npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --
 Για να εγκαταστήσεις την εντολή `rea` για τακτική χρήση:
 
 ```bash
-npm install --global rea-agents
+npm install --global build-anything
 rea --help
 ```
 
@@ -124,10 +124,10 @@ rea update
 Αν χρησιμοποιείς `npx`, ενημέρωσε τη ρύθμιση του agent με:
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-Έλεγξε τις αλλαγές και επανεκκίνησε τον agent σου. Για μεμονωμένες εντολές CLI, χρησιμοποίησε `npx rea-agents@latest` και στη συνέχεια την εντολή που θέλεις. Με Bun, χρησιμοποίησε `bunx rea-agents@latest` αντί για `npx rea-agents@latest`.
+Έλεγξε τις αλλαγές και επανεκκίνησε τον agent σου. Για μεμονωμένες εντολές CLI, χρησιμοποίησε `npx build-anything@latest` και στη συνέχεια την εντολή που θέλεις. Με Bun, χρησιμοποίησε `bunx build-anything@latest` αντί για `npx build-anything@latest`.
 
 ## Πώς λειτουργεί το REA
 
@@ -203,7 +203,7 @@ npx rea-agents@latest setup
 
 [Διάβασε τη μελέτη περίπτωσης](https://rea.tools/showcase/th04/) · [Αποθετήριο ανακατασκευής](https://github.com/N0zoM1z0/th04)
 
-Αν χρησιμοποίησες το REA για κάτι ενδιαφέρον, θα θέλαμε να το δούμε. Μοιράσου τη μελέτη σου σε ένα [issue](https://github.com/morluto/rea/issues) ή [pull request](https://github.com/morluto/rea/pulls), αναφέροντας τον στόχο, το ερώτημά σου, πώς βοήθησε το REA και τι ανακάλυψες.
+Αν χρησιμοποίησες το REA για κάτι ενδιαφέρον, θα θέλαμε να το δούμε. Μοιράσου τη μελέτη σου σε ένα [issue](https://github.com/xueba-gh/build-anything/issues) ή [pull request](https://github.com/xueba-gh/build-anything/pulls), αναφέροντας τον στόχο, το ερώτημά σου, πώς βοήθησε το REA και τι ανακάλυψες.
 
 ## Συχνές ερωτήσεις
 
@@ -231,7 +231,7 @@ npx rea-agents@latest setup
 <details>
 <summary><strong>Τι προσφέρει η εγκατάσταση του skill από το skills.sh;</strong></summary>
 
-Το skill παρέχει οδηγίες διερεύνησης για τον agent σου. Χρησιμοποίησε `npx rea-agents setup` για να καταχωρίσεις τον MCP server του REA και να εγκαταστήσεις τις αντίστοιχες οδηγίες. Στη συνέχεια, επανεκκίνησε τον agent σου. Δες την [εγκατάσταση μόνο του skill](../installation.md#skill-only-installation).
+Το skill παρέχει οδηγίες διερεύνησης για τον agent σου. Χρησιμοποίησε `npx build-anything setup` για να καταχωρίσεις τον MCP server του REA και να εγκαταστήσεις τις αντίστοιχες οδηγίες. Στη συνέχεια, επανεκκίνησε τον agent σου. Δες την [εγκατάσταση μόνο του skill](../installation.md#skill-only-installation).
 
 </details>
 
@@ -263,10 +263,10 @@ rea update
 Για ρύθμιση agent μέσω `npx`:
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-Αν χρησιμοποιείς agent, ολοκλήρωσε την [ανανέωση της ρύθμισης](#ενημέρωση-του-rea) και επανεκκίνησέ τον. Δοκίμασε ξανά την ίδια εργασία. Αν το πρόβλημα παραμένει, [άνοιξε ένα issue](https://github.com/morluto/rea/issues) με την έκδοση του REA, τον τύπο του στόχου, τα βήματα αναπαραγωγής και την έξοδο του σφάλματος.
+Αν χρησιμοποιείς agent, ολοκλήρωσε την [ανανέωση της ρύθμισης](#ενημέρωση-του-rea) και επανεκκίνησέ τον. Δοκίμασε ξανά την ίδια εργασία. Αν το πρόβλημα παραμένει, [άνοιξε ένα issue](https://github.com/xueba-gh/build-anything/issues) με την έκδοση του REA, τον τύπο του στόχου, τα βήματα αναπαραγωγής και την έξοδο του σφάλματος.
 
 </details>
 
@@ -291,9 +291,9 @@ npx rea-agents@latest setup
 
 <a href="https://www.star-history.com/?repos=morluto%2Frea&amp;type=date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date&amp;theme=dark&amp;legend=top-left" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
-    <img alt="Ιστορικό αστεριών του REA στο GitHub" src="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date&amp;theme=dark&amp;legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
+    <img alt="Ιστορικό αστεριών του REA στο GitHub" src="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
   </picture>
 </a>
 
@@ -307,7 +307,7 @@ npx rea-agents@latest setup
 
 ## Συνεισφορά
 
-Θα χαρούμε να βοηθήσεις στο REA! [Άνοιξε ένα issue](https://github.com/morluto/rea/issues) για να αναφέρεις ένα σφάλμα ή να προτείνεις μια λειτουργία, ή [στείλε ένα pull request](https://github.com/morluto/rea/pulls) για να βελτιώσεις τον κώδικα ή την τεκμηρίωση.
+Θα χαρούμε να βοηθήσεις στο REA! [Άνοιξε ένα issue](https://github.com/xueba-gh/build-anything/issues) για να αναφέρεις ένα σφάλμα ή να προτείνεις μια λειτουργία, ή [στείλε ένα pull request](https://github.com/xueba-gh/build-anything/pulls) για να βελτιώσεις τον κώδικα ή την τεκμηρίωση.
 
 Δες το [CONTRIBUTING.md](../../CONTRIBUTING.md) για τη ρύθμιση του περιβάλλοντος ανάπτυξης και τους ελέγχους, τον [οδηγό δοκιμών](../testing.md) για τις διαδικασίες επαλήθευσης και τον [χάρτη αρχιτεκτονικής](../architecture.mermaid) για τη δομή του έργου.
 

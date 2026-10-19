@@ -9,10 +9,10 @@
 
 **看到喜欢的功能，弄清它的工作原理，深入到二进制层面。**
 
-[![npm version](https://img.shields.io/npm/v/rea-agents?style=flat-square&color=cb3837)](https://www.npmjs.com/package/rea-agents)
+[![npm version](https://img.shields.io/npm/v/build-anything?style=flat-square&color=cb3837)](https://www.npmjs.com/package/build-anything)
 [![MCP tool catalog](https://img.shields.io/badge/MCP-tool_catalog-5c4ee5?style=flat-square)](../mcp-contracts.md#generated-catalog)
 [![Node.js requirements](https://img.shields.io/badge/Node.js-requirements-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#current-status)
-[![skills.sh](https://skills.sh/b/morluto/rea?style=flat-square)](https://skills.sh/morluto/rea/reverse-engineer-anything)
+[![skills.sh](https://skills.sh/b/xueba-gh/build-anything?style=flat-square)](https://skills.sh/xueba-gh/build-anything/reverse-engineer-anything)
 [![MIT license](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](../../LICENSE)
 [![Discord](https://img.shields.io/discord/1556595354999332884?logo=discord&logoColor=white&label=Discord&color=5865F2)](https://discord.gg/GkcryMnJDM)
 
@@ -22,12 +22,12 @@
 
 [快速开始](#快速开始) · [REA 的工作原理](#rea-的工作原理) · [可以分析什么](#可以分析什么) · [案例](#案例) · [常见问题](#常见问题) · [GNU objdump 和 Rizin 工具](../reverse-engineering-tools.md) · [文档](#文档)
 
-<code>npx rea-agents setup</code>
+<code>npx build-anything setup</code>
 
 </div>
 
 > [!IMPORTANT]
-> REA 官方来源： [morluto/rea](https://github.com/morluto/rea), [rea.tools](https://rea.tools/), [rea-agents](https://www.npmjs.com/package/rea-agents) (npm).
+> REA 官方来源： [xueba-gh/build-anything](https://github.com/xueba-gh/build-anything), [rea.tools](https://rea.tools/), [build-anything](https://www.npmjs.com/package/build-anything) (npm).
 > 请通过这些官方来源提供的安装和发布链接获取 REA。相似的仓库名称或复制的 README 不能证明下载内容来自官方。
 
 <div align="center">
@@ -71,7 +71,7 @@ REA 将智能体连接到分析工具，用于检查原生二进制文件、Java
 安装 Node.js 和 npm 后，运行：
 
 ```bash
-npx rea-agents setup
+npx build-anything setup
 ```
 
 选择智能体，检查计划中的变更并批准。设置流程会添加 REA 的 MCP 服务和匹配的工作流指引，并备份已有配置。完成后重启智能体。
@@ -91,7 +91,7 @@ npx rea-agents setup
 检查已解包的 JavaScript/Electron 应用目录或 ASAR 文件：
 
 ```bash
-npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json
+npx -y build-anything@latest analyze-javascript-application /absolute/path/to/app --json
 ```
 
 结果包含模块、导入、Electron 边界及相关证据。将路径替换为你的目标路径，例如 Windows 上的 `"D:/apps/example"`。
@@ -99,7 +99,7 @@ npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --
 如果需要经常使用，可以安装 `rea` 命令：
 
 ```bash
-npm install --global rea-agents
+npm install --global build-anything
 rea --help
 ```
 
@@ -122,10 +122,10 @@ Bun 全局更新需要 Bun 1.2.17 或更高版本。如果使用较旧的 Bun �
 如果使用 `npx`，通过以下命令更新智能体设置：
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-检查设置变更并重启智能体。单次 CLI 操作可使用 `npx rea-agents@latest`，后接所需命令。使用 Bun 时，用 `bunx rea-agents@latest` 代替 `npx rea-agents@latest`。
+检查设置变更并重启智能体。单次 CLI 操作可使用 `npx build-anything@latest`，后接所需命令。使用 Bun 时，用 `bunx build-anything@latest` 代替 `npx build-anything@latest`。
 
 ## REA 的工作原理
 
@@ -196,7 +196,7 @@ REA 需要 Node.js 22.x（>=22.19）、24.x（>=24.11）或 26+，以及 npm。�
 [阅读案例](https://rea.tools/zh-CN/showcase/th04/) ·
 [重建项目仓库](https://github.com/N0zoM1z0/th04)
 
-如果你用 REA 分析了有趣的目标，我们很想了解。欢迎通过 [issue](https://github.com/morluto/rea/issues) 或 [pull request](https://github.com/morluto/rea/pulls) 分享案例，说明目标、你的问题、REA 如何提供帮助，以及你的发现。
+如果你用 REA 分析了有趣的目标，我们很想了解。欢迎通过 [issue](https://github.com/xueba-gh/build-anything/issues) 或 [pull request](https://github.com/xueba-gh/build-anything/pulls) 分享案例，说明目标、你的问题、REA 如何提供帮助，以及你的发现。
 
 ## 常见问题
 
@@ -224,7 +224,7 @@ REA 会在操作需要时启动 Hopper。在 macOS 上，首次运行时可能�
 <details>
 <summary><strong>从 skills.sh 安装 skill 有什么作用？</strong></summary>
 
-skill 为智能体提供调查指引。使用 `npx rea-agents setup` 注册 REA 的 MCP 服务并安装匹配的指引，然后重启智能体。见[仅安装 skill](../installation.md#skill-only-installation)。
+skill 为智能体提供调查指引。使用 `npx build-anything setup` 注册 REA 的 MCP 服务并安装匹配的指引，然后重启智能体。见[仅安装 skill](../installation.md#skill-only-installation)。
 
 </details>
 
@@ -256,10 +256,10 @@ rea update
 通过 `npx` 设置智能体时使用：
 
 ```bash
-npx rea-agents@latest setup
+npx build-anything@latest setup
 ```
 
-如果正在使用智能体，请完成[设置更新](#更新-rea)并重启智能体。重试同一任务。如果问题仍然存在，请[提交 issue](https://github.com/morluto/rea/issues)，附上 REA 版本、目标类型、复现步骤和错误输出。
+如果正在使用智能体，请完成[设置更新](#更新-rea)并重启智能体。重试同一任务。如果问题仍然存在，请[提交 issue](https://github.com/xueba-gh/build-anything/issues)，附上 REA 版本、目标类型、复现步骤和错误输出。
 
 </details>
 
@@ -284,9 +284,9 @@ npx rea-agents@latest setup
 
 <a href="https://www.star-history.com/?repos=morluto%2Frea&amp;type=date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date&amp;theme=dark&amp;legend=top-left" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
-    <img alt="REA 的 GitHub Star 历史" src="https://api.star-history.com/chart?repos=morluto/rea&amp;type=date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date&amp;theme=dark&amp;legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
+    <img alt="REA 的 GitHub Star 历史" src="https://api.star-history.com/chart?repos=xueba-gh/build-anything&amp;type=date" />
   </picture>
 </a>
 
@@ -301,7 +301,7 @@ REA 用于合法的研究、教育、互操作性、软件保存，以及分析�
 
 ## 参与贡献
 
-欢迎帮助改进 REA！你可以[提交 issue](https://github.com/morluto/rea/issues) 报告错误或建议功能，也可以[提交 pull request](https://github.com/morluto/rea/pulls) 改进代码或文档。
+欢迎帮助改进 REA！你可以[提交 issue](https://github.com/xueba-gh/build-anything/issues) 报告错误或建议功能，也可以[提交 pull request](https://github.com/xueba-gh/build-anything/pulls) 改进代码或文档。
 
 开发设置和检查见 [CONTRIBUTING.md](../../CONTRIBUTING.md)，验证流程见[测试指南](../testing.md)，项目结构见[架构图](../architecture.mermaid)。
 

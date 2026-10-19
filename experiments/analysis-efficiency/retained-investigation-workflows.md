@@ -1,6 +1,6 @@
 # Retained investigation query checkpoint
 
-[#3134](https://github.com/morluto/rea/issues/3134) measured existing retained
+[#3134](https://github.com/xueba-gh/build-anything/issues/3134) measured existing retained
 queries on Linux. Selected reads preserved the requested facts, original
 Evidence and Unknown revisions, including a mixed investigation. Existing
 contracts suffice for these questions; this checkpoint adds no production API,
@@ -8,7 +8,7 @@ cache, persistence or default change.
 
 Imported JavaScript pages repeatedly validated their entire source graph. That
 separate, observed bottleneck is owned by
-[#4810](https://github.com/morluto/rea/issues/4810). Smaller replies did not
+[#4810](https://github.com/xueba-gh/build-anything/issues/4810). Smaller replies did not
 establish a general model-token or whole-task latency improvement.
 
 The [curated measurements](retained-investigation-results.json) retain individual

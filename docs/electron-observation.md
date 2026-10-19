@@ -194,7 +194,7 @@ wrapper recognition. Re-registering a raw recording wrapper on another channel
 retains the original registration's channel attribution.
 Mutating `.listener` on a raw recording wrapper can also prevent removal through
 application decorators; the reproduced identity conflict is tracked in
-[#4513](https://github.com/morluto/rea/issues/4513).
+[#4513](https://github.com/xueba-gh/build-anything/issues/4513).
 
 ### Target fuse prerequisites
 
